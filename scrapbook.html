@@ -86,7 +86,7 @@ const BOOKS=[
  {t:"Saving 6",c:"#7a7f86",isbn:["9781464215995"]},
  {t:"Redeeming 6",c:"#b23aa7",isbn:["9781464216022"]},
  {t:"Taming 7",c:"#1f8d84",isbn:["9781464216053"]},
- {t:"Releasing 10",c:"#c2475a",isbn:["9781464237232","9780349439341"]}
+ {t:"Releasing 10",c:"#c2475a",img:"releasing-10.jpg",isbn:["9781464237232","9780349439341"]}
 ];
 // six slots: x,y,w,rotation(deg),default couple
 const SLOTS=[
@@ -209,10 +209,10 @@ function tape(x,y,w,rot,c){ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.fil
 const cache={};
 function loadCover(b){
   if(b.t in cache)return Promise.resolve(cache[b.t]);
-  return new Promise(res=>{let i=0;const next=()=>{if(i>=b.isbn.length){cache[b.t]=null;return res(null);}
+  return new Promise(res=>{const srcs=[...(b.img?[b.img]:[]),...b.isbn.map(x=>"https://covers.openlibrary.org/b/isbn/"+x+"-L.jpg?default=false")];let i=0;const next=()=>{if(i>=srcs.length){cache[b.t]=null;return res(null);}
     const im=new Image();im.crossOrigin="anonymous";
     im.onload=()=>{if(im.naturalWidth>20){cache[b.t]=im;res(im);}else{i++;next();}};im.onerror=()=>{i++;next();};
-    im.src="https://covers.openlibrary.org/b/isbn/"+b.isbn[i]+"-L.jpg?default=false";};next();});
+    im.src=srcs[i];};next();});
 }
 let allowCovers=true;
 function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}

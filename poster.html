@@ -41,20 +41,20 @@ const BOOKS=[
  {n:3,t:"Saving 6",y:2023,a:"ja",isbn:["9781464215995"]},
  {n:4,t:"Redeeming 6",y:2023,a:"ja",isbn:["9781464216022"]},
  {n:5,t:"Taming 7",y:2024,a:"gc",isbn:["9781464216053"]},
- {n:6,t:"Releasing 10",y:2025,a:"hl",isbn:["9781464237232","9780349439341"]}
+ {n:6,t:"Releasing 10",y:2025,a:"hl",img:"releasing-10.jpg",isbn:["9781464237232","9780349439341"]}
 ];
 const cv=document.getElementById("cv"),ctx=cv.getContext("2d");
 const cache={};
 function loadCover(b){
   if(cache[b.n]!==undefined) return Promise.resolve(cache[b.n]);
-  return new Promise(res=>{
+  return new Promise(res=>{const srcs=[...(b.img?[b.img]:[]),...b.isbn.map(x=>"https://covers.openlibrary.org/b/isbn/"+x+"-L.jpg?default=false")];
     let i=0;
     const tryNext=()=>{
-      if(i>=b.isbn.length){cache[b.n]=null;return res(null);}
+      if(i>=srcs.length){cache[b.n]=null;return res(null);}
       const img=new Image();img.crossOrigin="anonymous";
       img.onload=()=>{if(img.naturalWidth>20){cache[b.n]=img;res(img);}else{i++;tryNext();}};
       img.onerror=()=>{i++;tryNext();};
-      img.src="https://covers.openlibrary.org/b/isbn/"+b.isbn[i]+"-L.jpg?default=false";
+      img.src=srcs[i];
     };tryNext();
   });
 }
@@ -86,7 +86,7 @@ async function draw(){
   ctx.fillStyle="#9fb0c3";ctx.font="28px 'Source Sans 3'";ctx.fillText("Ballylaggin, Co. Cork · in recommended order",W/2,224);
   // grid
   const cols=list.length<=2?2:3, rows=Math.ceil(list.length/cols);
-  const cw=list.length<=2?330:290, ch=cw*1.5, gapX=48, gapY=120;
+  const cw=list.length<=2?330:list.length<=3?290:240, ch=cw*1.5, gapX=list.length<=3?48:70, gapY=105;
   const totalW=cols*cw+(cols-1)*gapX, startX=(W-totalW)/2;
   const areaTop=280, totalH=rows*ch+(rows-1)*gapY, startY=areaTop+Math.max(0,(H-areaTop-150-totalH)/2);
   for(let k=0;k<list.length;k++){
@@ -110,9 +110,9 @@ async function draw(){
     ctx.fillStyle="#9fb0c3";ctx.font="24px 'Source Sans 3'";ctx.fillText(String(b.y),x+cw/2,y+ch+82);
   }
   if(arc==="all"){ctx.fillStyle="#9fb0c3";ctx.font="italic 26px 'Source Sans 3'";ctx.textAlign="center";
-    ctx.fillText("Releasing 10 is set first in time, but read it last: it spoils Taming 7.",W/2,H-112);}
+    ctx.fillText("Releasing 10 is set first in time, but read it last: it spoils Taming 7.",W/2,H-78);}
   ctx.fillStyle="#d9a441";ctx.font="34px 'Bebas Neue'";ctx.textAlign="center";
-  ctx.fillText("READERSATLAS.COM  ·  @READERS.ATLAS",W/2,H-52);
+  ctx.fillText("READERSATLAS.COM  ·  @READERS.ATLAS",W/2,H-30);
   sendHeight();
 }
 function download(){
