@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boys of Tommen · Quote Scrapbook Maker</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Caveat+Brush&family=Libre+Baskerville:ital@0;1&family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0b1420;--navy:#13233a;--card:#172a43;--line:rgba(190,210,235,.14);--gold:#d9a441;--text:#e9eef4;--muted:#9fb0c3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--text);font:15px/1.5 "Source Sans 3",system-ui,sans-serif;padding:16px 14px 40px}
+  .wrap{max-width:1100px;margin:0 auto}
+  a{color:#f0c46a}
+  h1{font:400 34px/1 "Bebas Neue";letter-spacing:.04em;margin:6px 0 4px;color:var(--gold)}
+  .sub{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+  .grid{display:grid;gap:18px}
+  @media(min-width:900px){.grid{grid-template-columns:minmax(0,1fr) 420px;align-items:start}.stage{position:sticky;top:12px}}
+  .stage{background:var(--navy);border:1px solid var(--line);border-radius:14px;padding:10px}
+  canvas{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  button,select,textarea,input{font:inherit;color:inherit}
+  .btn{border-radius:999px;border:1px solid rgba(217,164,65,.6);background:transparent;padding:9px 16px;min-height:42px;cursor:pointer;font-weight:700}
+  .btn.gold{background:var(--gold);color:#1a1205;border-color:var(--gold)}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  .panel h2{font:400 20px "Bebas Neue";letter-spacing:.06em;color:var(--gold);margin:0 0 8px}
+  .slot{border-top:1px solid var(--line);padding:12px 0}
+  .slot:first-of-type{border-top:0;padding-top:4px}
+  .slot .row{display:flex;gap:8px;align-items:center;margin-bottom:6px}
+  .slot b{font:600 14px "Source Sans 3"}
+  select{background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px 8px;min-height:38px;margin-left:auto}
+  textarea{width:100%;min-height:92px;resize:vertical;background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;outline:none}
+  textarea:focus{border-color:var(--gold)}
+  .opts{display:grid;gap:8px;margin-top:6px}
+  .opts label{display:flex;gap:10px;align-items:center;cursor:pointer}
+  .opts input{accent-color:var(--gold);width:18px;height:18px}
+  .tip{font-size:13px;color:var(--muted);margin:8px 0 0}
+  .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .fine{font-size:12.5px;color:var(--muted);margin-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html#books">← Back to the Boys of Tommen guide</a>
+  <h1>Quote scrapbook maker</h1>
+  <p class="sub">Type your favourite lines into the six spaces and they appear on a grid-paper collage with the covers. Dialogue inside quotation marks gets highlighted automatically. Download it as a PNG for Instagram (1080 × 1350).</p>
+
+  <div class="grid">
+    <div class="stage">
+      <canvas id="cv" width="1080" height="1350" aria-label="Scrapbook collage preview"></canvas>
+      <div class="bar">
+        <button class="btn gold" id="dl">Download PNG</button>
+        <button class="btn" id="shuffle">Shuffle doodles</button>
+        <button class="btn" id="clear">Clear my quotes</button>
+      </div>
+      <p class="tip" id="note">Covers load from Open Library. If one can’t load, a coloured spine is used instead.</p>
+    </div>
+
+    <div>
+      <div class="panel" id="slots"><h2>Your quotes</h2></div>
+      <div class="panel" style="margin-top:14px">
+        <h2>Options</h2>
+        <div class="opts">
+          <label><input type="checkbox" id="optCovers" checked> Show the book covers</label>
+          <label><input type="checkbox" id="optAll"> Highlight every line, not just dialogue</label>
+          <label><input type="checkbox" id="optCredit" checked> Add “@readers.atlas” credit</label>
+          <label><input type="checkbox" id="optHelp" checked> Show “type your quote” hints in empty spaces</label>
+        </div>
+        <p class="tip">Tip: wrap any word in *asterisks* to circle it in pen, like *baby*.</p>
+      </div>
+      <p class="fine">Quotes you type are saved in this browser only. The characters and covers belong to Chloe Walsh and her publishers. This is a fan-made tool.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- config ---------- */
+const COUPLES={
+  js:{name:"Johnny & Shannon",hl:"rgba(214,160,245,.55)",pen:"#a64cc9"},
+  ja:{name:"Joey & Aoife",hl:"rgba(255,222,92,.6)",pen:"#c79400"},
+  gc:{name:"Gibsie & Claire",hl:"rgba(132,202,240,.55)",pen:"#2f7fb8"},
+  hl:{name:"Hughie & Lizzie",hl:"rgba(255,160,190,.55)",pen:"#d24c7c"}
+};
+const BOOKS=[
+ {t:"Binding 13",c:"#3a5fc4",isbn:["9781728299945","9780349439242"]},
+ {t:"Keeping 13",c:"#d8456b",isbn:["9781728299976","9780349439273"]},
+ {t:"Saving 6",c:"#7a7f86",isbn:["9781464215995"]},
+ {t:"Redeeming 6",c:"#b23aa7",isbn:["9781464216022"]},
+ {t:"Taming 7",c:"#1f8d84",isbn:["9781464216053"]},
+ {t:"Releasing 10",c:"#c2475a",isbn:["9781464237232","9780349439341"]}
+];
+// six slots: x,y,w,rotation(deg),default couple
+const SLOTS=[
+ {x:30,y:150,w:330,r:-3,a:"js"},
+ {x:385,y:300,w:300,r:0,a:"js"},
+ {x:705,y:135,w:345,r:1.5,a:"js"},
+ {x:30,y:810,w:330,r:-2.5,a:"ja"},
+ {x:395,y:820,w:320,r:0,a:"ja"},
+ {x:740,y:900,w:315,r:1,a:"gc"}
+];
+let state={q:["","","","","",""],a:SLOTS.map(s=>s.a),seed:7};
+try{const s=JSON.parse(localStorage.getItem("b13-scrap")||"null");if(s&&s.q)state=Object.assign(state,s);}catch(e){}
+function save(){try{localStorage.setItem("b13-scrap",JSON.stringify(state));}catch(e){}}
+
+/* ---------- editor ---------- */
+const slotsEl=document.getElementById("slots");
+const labels=["Top left","Top middle","Top right","Bottom left","Bottom middle","Bottom right"];
+SLOTS.forEach((s,i)=>{
+  const d=document.createElement("div");d.className="slot";
+  d.innerHTML=`<div class="row"><b>${i+1}. ${labels[i]}</b>
+   <select aria-label="Couple colour for quote ${i+1}">${Object.entries(COUPLES).map(([k,c])=>`<option value="${k}">${c.name}</option>`).join("")}</select></div>
+   <textarea aria-label="Quote ${i+1}" placeholder="Type or paste a favourite line… Put dialogue in “quotes” to highlight it."></textarea>`;
+  const sel=d.querySelector("select"),ta=d.querySelector("textarea");
+  sel.value=state.a[i];ta.value=state.q[i];
+  sel.onchange=()=>{state.a[i]=sel.value;save();draw();};
+  ta.oninput=()=>{state.q[i]=ta.value;save();schedule();};
+  slotsEl.appendChild(d);
+});
+["optCovers","optAll","optCredit","optHelp"].forEach(id=>document.getElementById(id).onchange=draw);
+document.getElementById("shuffle").onclick=()=>{state.seed=Math.floor(Math.random()*9999);save();draw();};
+document.getElementById("clear").onclick=()=>{state.q=state.q.map(()=>"");save();slotsEl.querySelectorAll("textarea").forEach(t=>t.value="");draw();};
+let tmr;function schedule(){clearTimeout(tmr);tmr=setTimeout(draw,120);}
+
+/* ---------- drawing ---------- */
+const cv=document.getElementById("cv"),ctx=cv.getContext("2d");
+const W=1080,H=1350;
+function rng(seed){let s=seed>>>0||1;return()=>((s=Math.imul(s^s>>>15,1|s)+0x6D2B79F5|0,((s^s>>>7)>>>0)%100000)/100000);}
+
+function paper(R){
+  ctx.fillStyle="#eeece7";ctx.fillRect(0,0,W,H);
+  // crumple: soft light/dark facets
+  for(let i=0;i<70;i++){
+    const x=R()*W,y=R()*H,r=120+R()*320;
+    const g=ctx.createRadialGradient(x,y,0,x,y,r);
+    const dark=R()<.5;g.addColorStop(0,dark?"rgba(120,115,105,.035)":"rgba(255,255,255,.4)");g.addColorStop(1,"rgba(0,0,0,0)");
+    ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2);
+  }
+  // creases
+  for(let i=0;i<26;i++){
+    let x=R()*W,y=R()*H;const ang=R()*Math.PI*2,len=200+R()*500;
+    ctx.beginPath();ctx.moveTo(x,y);
+    for(let k=0;k<6;k++){x+=Math.cos(ang+(R()-.5)*.5)*len/6;y+=Math.sin(ang+(R()-.5)*.5)*len/6;ctx.lineTo(x,y);}
+    ctx.strokeStyle="rgba(90,85,78,.09)";ctx.lineWidth=1.2;ctx.stroke();
+    ctx.translate(1.5,1.5);ctx.strokeStyle="rgba(255,255,255,.55)";ctx.stroke();ctx.setTransform(1,0,0,1,0,0);
+  }
+  // grid
+  ctx.strokeStyle="rgba(70,80,95,.20)";ctx.lineWidth=1.3;
+  for(let x=18;x<W;x+=36){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  for(let y=18;y<H;y+=36){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+}
+
+/* doodles */
+function heart(x,y,s,stroke,fill,rot=0){
+  ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.beginPath();
+  ctx.moveTo(0,s*.3);ctx.bezierCurveTo(-s*1.1,-s*.45,-s*.45,-s*1.15,0,-s*.45);ctx.bezierCurveTo(s*.45,-s*1.15,s*1.1,-s*.45,0,s*.3);
+  ctx.lineTo(0,s*.75);ctx.closePath();
+  if(fill){ctx.fillStyle=fill;ctx.fill();}
+  if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=Math.max(2.5,s*.12);ctx.lineJoin="round";ctx.stroke();}
+  ctx.restore();
+}
+function cheart(x,y,s,stroke,fill,rot){ // nicer heart
+  ctx.save();ctx.translate(x,y);ctx.rotate(rot||0);ctx.beginPath();
+  ctx.moveTo(0,s*.35);
+  ctx.bezierCurveTo(-s*.1,s*.25,-s,-s*.05,-s*.95,-s*.45);
+  ctx.bezierCurveTo(-s*.9,-s*.85,-s*.35,-s*1,0,-s*.55);
+  ctx.bezierCurveTo(s*.35,-s*1,s*.9,-s*.85,s*.95,-s*.45);
+  ctx.bezierCurveTo(s,-s*.05,s*.1,s*.25,0,s*.35);ctx.closePath();
+  if(fill){ctx.fillStyle=fill;ctx.fill();}
+  if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=Math.max(3,s*.14);ctx.lineJoin="round";ctx.stroke();}
+  ctx.restore();
+}
+function star(x,y,r,stroke,fill,rot=0){
+  ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.beginPath();
+  for(let i=0;i<10;i++){const rr=i%2?r*.45:r,a=i*Math.PI/5-Math.PI/2;ctx.lineTo(Math.cos(a)*rr,Math.sin(a)*rr);}
+  ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill();}ctx.strokeStyle=stroke;ctx.lineWidth=2.5;ctx.lineJoin="round";ctx.stroke();ctx.restore();
+}
+function sparkle(x,y,r,c){ctx.save();ctx.translate(x,y);ctx.beginPath();ctx.moveTo(0,-r);ctx.quadraticCurveTo(0,0,r,0);ctx.quadraticCurveTo(0,0,0,r);ctx.quadraticCurveTo(0,0,-r,0);ctx.quadraticCurveTo(0,0,0,-r);ctx.strokeStyle=c;ctx.lineWidth=2.5;ctx.stroke();ctx.restore();}
+function flower(x,y,r,c){ctx.save();ctx.translate(x,y);ctx.strokeStyle=c;ctx.lineWidth=2.6;
+  for(let i=0;i<5;i++){ctx.rotate(Math.PI*2/5);ctx.beginPath();ctx.ellipse(0,-r*.62,r*.32,r*.55,0,0,Math.PI*2);ctx.stroke();}
+  ctx.beginPath();ctx.arc(0,0,r*.22,0,Math.PI*2);ctx.stroke();ctx.restore();}
+function vine(x,y,len,c){ctx.save();ctx.strokeStyle=c;ctx.lineWidth=4;ctx.lineCap="round";
+  ctx.beginPath();ctx.moveTo(x,y);ctx.bezierCurveTo(x+len*.3,y-20,x+len*.6,y+20,x+len,y-6);ctx.stroke();
+  for(let i=1;i<=4;i++){const px=x+len*i/5,py=y+(i%2?-8:6);ctx.beginPath();ctx.ellipse(px,py-16,10,14,i%2?.4:-.4,0,Math.PI*2);ctx.stroke();}
+  ctx.beginPath();ctx.moveTo(x+14,y-14);ctx.lineTo(x,y);ctx.lineTo(x+14,y+12);ctx.stroke();ctx.restore();}
+function dashedCurve(pts,c,w=4){ctx.save();ctx.setLineDash([12,10]);ctx.strokeStyle=c;ctx.lineWidth=w;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(pts[0],pts[1]);ctx.bezierCurveTo(...pts.slice(2));ctx.stroke();ctx.restore();}
+function cupid(x,y){ // arrow through a heart
+  ctx.save();ctx.translate(x,y);ctx.rotate(-.12);
+  ctx.strokeStyle="#2b2b2b";ctx.lineWidth=4;ctx.lineCap="round";
+  ctx.beginPath();ctx.moveTo(-150,0);ctx.lineTo(120,0);ctx.stroke();
+  ctx.fillStyle="#e7c99b";ctx.beginPath();ctx.moveTo(150,0);ctx.lineTo(118,-14);ctx.lineTo(124,0);ctx.lineTo(118,14);ctx.closePath();ctx.fill();ctx.stroke();
+  for(const d of[-1,1]){ctx.beginPath();ctx.moveTo(-150,0);ctx.lineTo(-170,18*d);ctx.lineTo(-128,18*d);ctx.lineTo(-112,0);ctx.closePath();ctx.fillStyle="#f2e6cf";ctx.fill();ctx.stroke();}
+  cheart(0,8,46,"#2b2b2b","#f07fa0",.15);
+  ctx.restore();
+}
+function blob(x,y,s,R){ // original little round doodle buddy holding a heart
+  ctx.save();ctx.translate(x,y);ctx.strokeStyle="#222";ctx.lineWidth=3.2;ctx.lineCap="round";ctx.lineJoin="round";
+  ctx.fillStyle="#fbfaf7";ctx.beginPath();ctx.ellipse(0,0,s,s*.92,0,0,Math.PI*2);ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.moveTo(-s*.75,s*.65);ctx.lineTo(-s*.9,s*1.25);ctx.moveTo(s*.6,s*.75);ctx.lineTo(s*.7,s*1.3);ctx.stroke();
+  ctx.fillStyle="#222";ctx.beginPath();ctx.arc(-s*.3,-s*.1,s*.07,0,7);ctx.arc(s*.25,-s*.1,s*.07,0,7);ctx.fill();
+  ctx.beginPath();ctx.arc(0,s*.08,s*.14,0.2,Math.PI-.2);ctx.stroke();
+  ctx.fillStyle="rgba(240,120,150,.55)";ctx.beginPath();ctx.ellipse(-s*.5,s*.12,s*.14,s*.08,0,0,7);ctx.ellipse(s*.48,s*.12,s*.14,s*.08,0,0,7);ctx.fill();
+  ctx.beginPath();ctx.moveTo(s*.85,s*.2);ctx.lineTo(s*1.35,s*.05);ctx.stroke();
+  cheart(s*1.45,-s*.02,s*.28,"#222","#e24a6a",.2);
+  ctx.restore();
+}
+function tape(x,y,w,rot,c){ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.fillStyle=c;ctx.globalAlpha=.75;
+  ctx.beginPath();ctx.moveTo(-w/2,-14);for(let i=0;i<=8;i++)ctx.lineTo(-w/2+(w*i/8),-14+(i%2?3:-1));ctx.lineTo(w/2,14);for(let i=8;i>=0;i--)ctx.lineTo(-w/2+(w*i/8),14+(i%2?-3:1));ctx.closePath();ctx.fill();ctx.restore();}
+
+/* covers */
+const cache={};
+function loadCover(b){
+  if(b.t in cache)return Promise.resolve(cache[b.t]);
+  return new Promise(res=>{let i=0;const next=()=>{if(i>=b.isbn.length){cache[b.t]=null;return res(null);}
+    const im=new Image();im.crossOrigin="anonymous";
+    im.onload=()=>{if(im.naturalWidth>20){cache[b.t]=im;res(im);}else{i++;next();}};im.onerror=()=>{i++;next();};
+    im.src="https://covers.openlibrary.org/b/isbn/"+b.isbn[i]+"-L.jpg?default=false";};next();});
+}
+let allowCovers=true;
+function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+async function covers(){
+  const n=6,cw=150,ch=225,overlap=-6,total=n*cw+(n-1)*overlap,x0=(W-total)/2,y0=545;
+  for(let i=0;i<n;i++){
+    const b=BOOKS[i],x=x0+i*(cw+overlap),y=y0+(i%2?6:-4),rot=(i-2.5)*.012;
+    const img=allowCovers?await loadCover(b):null;
+    ctx.save();ctx.translate(x+cw/2,y+ch/2);ctx.rotate(rot);
+    ctx.shadowColor="rgba(0,0,0,.35)";ctx.shadowBlur=18;ctx.shadowOffsetY=10;ctx.fillStyle="#111";rr(-cw/2,-ch/2,cw,ch,4);ctx.fill();ctx.shadowColor="transparent";
+    if(img){ctx.save();rr(-cw/2,-ch/2,cw,ch,4);ctx.clip();const s=Math.max(cw/img.naturalWidth,ch/img.naturalHeight);ctx.drawImage(img,-img.naturalWidth*s/2,-img.naturalHeight*s/2,img.naturalWidth*s,img.naturalHeight*s);ctx.restore();}
+    else{const g=ctx.createLinearGradient(-cw/2,-ch/2,cw/2,ch/2);g.addColorStop(0,b.c);g.addColorStop(1,"#0b1420");ctx.fillStyle=g;rr(-cw/2,-ch/2,cw,ch,4);ctx.fill();
+      ctx.fillStyle="rgba(255,255,255,.92)";ctx.textAlign="center";ctx.font="110px 'Bebas Neue'";ctx.fillText(b.t.split(" ")[1],0,40);
+      ctx.font="italic 24px 'Libre Baskerville'";ctx.fillText(b.t.split(" ")[0],0,-40);
+      ctx.font="15px 'Bebas Neue'";ctx.fillText("CHLOE WALSH",0,-ch/2+26);}
+    ctx.restore();
+  }
+}
+
+/* text */
+function tokens(str){ // returns words with flags: hl (inside dialogue), circ (*word*)
+  const out=[];let inQ=false;
+  str.replace(/\r/g,"").split("\n").forEach((para,pi)=>{
+    if(pi>0)out.push({br:true});
+    para.split(/(\s+)/).forEach(w=>{
+      if(!w||/^\s+$/.test(w))return;
+      let circ=false;let word=w;
+      if(/^\*.+\*[^\w]*$/.test(word)){circ=true;word=word.replace(/\*/g,"");}
+      const opens=/^[“"]/.test(word),closes=/[”"][^\w]*$/.test(word)&&!(word.length===1&&opens);
+      let hl=inQ||opens;
+      if(opens)inQ=true;
+      if(closes&&(inQ)){hl=true;inQ=false;}
+      if(opens&&closes&&word.length>1)inQ=false;
+      out.push({w:word,hl,circ});
+    });
+  });
+  return out;
+}
+function quote(i,R){
+  const s=SLOTS[i],txt=state.q[i].trim(),col=COUPLES[state.a[i]],all=document.getElementById("optAll").checked;
+  ctx.save();ctx.translate(s.x,s.y);ctx.rotate(s.r*Math.PI/180);
+  if(!txt){
+    if(document.getElementById("optHelp").checked){
+      ctx.setLineDash([8,8]);ctx.strokeStyle="rgba(60,60,70,.35)";ctx.lineWidth=2;rr(0,0,s.w,170,10);ctx.stroke();ctx.setLineDash([]);
+      ctx.fillStyle="rgba(60,60,70,.55)";ctx.font="700 30px 'Caveat'";ctx.textAlign="center";
+      ctx.fillText("your "+col.name+" quote",s.w/2,78);ctx.font="24px 'Caveat'";ctx.fillText("type it in the box ✎",s.w/2,110);
+    }
+    ctx.restore();return;
+  }
+  const fs=27,lh=39;ctx.font=`${fs}px 'Libre Baskerville'`;ctx.textBaseline="alphabetic";
+  const toks=tokens(txt),space=ctx.measureText(" ").width;
+  // layout
+  const lines=[[]];let lw=0;
+  toks.forEach(t=>{if(t.br){lines.push([]);lw=0;return;}const ww=ctx.measureText(t.w).width;if(lw+ww>s.w&&lines[lines.length-1].length){lines.push([]);lw=0;}lines[lines.length-1].push({...t,ww});lw+=ww+space;});
+  const maxLines=Math.floor((i===1?220:i<3?380:440)/lh);
+  lines.splice(maxLines);
+  lines.forEach((ln,li)=>{
+    let x=0;const y=fs+li*lh;
+    // highlight runs
+    let runStart=null,runEnd=0;
+    const flush=()=>{if(runStart!==null){ctx.fillStyle=col.hl;ctx.fillRect(runStart-3,y-fs+1,runEnd-runStart+6,fs+9);runStart=null;}};
+    ln.forEach(t=>{const on=all||t.hl;if(on){if(runStart===null)runStart=x;runEnd=x+t.ww;}else flush();x+=t.ww+space;});flush();
+    x=0;ln.forEach(t=>{ctx.fillStyle="#2d2b28";ctx.fillText(t.w,x,y);
+      if(t.circ){ctx.strokeStyle=col.pen;ctx.lineWidth=2.4;ctx.beginPath();ctx.ellipse(x+t.ww/2,y-fs*.35,t.ww/2+9,fs*.75,-.05,0,Math.PI*2);ctx.stroke();}
+      x+=t.ww+space;});
+  });
+  // little pen heart beside the quote
+  cheart(-14,fs*.6,13,col.pen,null,-.2);
+  ctx.restore();
+}
+
+async function draw(){
+  await document.fonts.ready;
+  const R=rng(state.seed);
+  paper(R);
+  // title
+  ctx.save();ctx.textAlign="center";ctx.fillStyle="#1d1d1d";ctx.font="96px 'Caveat Brush'";ctx.fillText("Boys of Tommen",W/2,96);
+  ctx.font="600 26px 'Source Sans 3'";ctx.letterSpacing="4px";ctx.fillText("BY CHLOE WALSH",W/2+150,130);ctx.letterSpacing="0px";ctx.restore();
+  // big doodles (behind text)
+  const blue="#3d8ee6",pink="#e57aa0",orange="#ef8a2b",yellow="#f2c230",ink="#2a2a2a";
+  heart(70,70,42,blue,null,-.2);heart(150,105,32,blue,null,.15);
+  sparkle(820,60,26,"#b061c9");sparkle(860,105,16,"#b061c9");star(800,120,18,"#c06ab8",null,.2);
+  dashedCurve([1060,120,1000,60,960,180,1040,260],orange,4);dashedCurve([960,240,1010,300,1060,330,1070,420],orange,4);
+  cupid(540,180);
+  dashedCurve([400,190,300,230,330,360,450,330],"#222",5);
+  vine(80,500,240,yellow);
+  flower(70,770,30,pink);flower(110,725,20,pink);
+  for(let k=0;k<6;k++)star(380+R()*600,480+R()*40,10+R()*8,"#c06ab8","rgba(230,170,215,.6)",R());
+  for(let k=0;k<9;k++)cheart(820+R()*230,1240+R()*90,8+R()*6,null,"#c23a3a",R()-.5);for(let k=0;k<5;k++)cheart(420+R()*80,1290+R()*40,7+R()*5,null,"#c23a3a",R()-.5);
+  sparkle(540,520,18,ink);
+  // covers band with tape
+  if(document.getElementById("optCovers").checked){await covers();tape(140,548,110,-.3,"rgba(240,190,90,.9)");tape(945,560,110,.35,"rgba(150,200,240,.9)");}
+  // quotes
+  for(let i=0;i<6;i++)quote(i,R);
+  // blob buddies
+  blob(1000,500,34,R);blob(560,1270,32,R);
+  // credit
+  if(document.getElementById("optCredit").checked){ctx.save();ctx.translate(990,385);ctx.rotate(.28);ctx.fillStyle="#222";ctx.font="700 30px 'Caveat'";ctx.textAlign="center";ctx.fillText("@readers.atlas",0,0);ctx.restore();}
+}
+function download(){
+  try{cv.toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="boys-of-tommen-scrapbook.png";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000);},"image/png");}
+  catch(e){allowCovers=false;document.getElementById("note").textContent="Your browser blocked the cover images for download, so this PNG uses coloured spines.";draw().then(download);}
+}
+document.getElementById("dl").onclick=download;
+draw();
+</script>
+</body>
+</html>

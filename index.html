@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Boys of Tommen · Reader’s Guide</title>
+<meta name="description" content="A spoiler-safe fan companion to Chloe Walsh’s Boys of Tommen series: reading order, characters, timeline, recaps, family tree and connections.">
+<meta name="theme-color" content="#0b1420">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>/* Leaflet 1.9.4 */
+/* required styles */
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+.leaflet-container {
+	overflow: hidden;
+	}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
+	  -webkit-user-drag: none;
+	}
+/* Prevents IE11 from highlighting tiles in blue */
+.leaflet-tile::selection {
+	background: transparent;
+}
+/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
+.leaflet-safari .leaflet-tile {
+	image-rendering: -webkit-optimize-contrast;
+	}
+/* hack that prevents hw layers "stretching" when loading new tiles */
+.leaflet-safari .leaflet-tile-container {
+	width: 1600px;
+	height: 1600px;
+	-webkit-transform-origin: 0 0;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	display: block;
+	}
+/* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
+/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+.leaflet-container .leaflet-overlay-pane svg {
+	max-width: none !important;
+	max-height: none !important;
+	}
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+	max-width: none !important;
+	max-height: none !important;
+	width: auto;
+	padding: 0;
+	}
+
+.leaflet-container img.leaflet-tile {
+	/* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+	mix-blend-mode: plus-lighter;
+}
+
+.leaflet-container.leaflet-touch-zoom {
+	-ms-touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
+	}
+.leaflet-container.leaflet-touch-drag {
+	-ms-touch-action: pinch-zoom;
+	/* Fallback for FF which doesn't support pinch-zoom */
+	touch-action: none;
+	touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.leaflet-container {
+	-webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+	filter: inherit;
+	visibility: hidden;
+	}
+.leaflet-tile-loaded {
+	visibility: inherit;
+	}
+.leaflet-zoom-box {
+	width: 0;
+	height: 0;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	z-index: 800;
+	}
+/* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+.leaflet-overlay-pane svg {
+	-moz-user-select: none;
+	}
+
+.leaflet-pane         { z-index: 400; }
+
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+
+.leaflet-vml-shape {
+	width: 1px;
+	height: 1px;
+	}
+.lvml {
+	behavior: url(#default#VML);
+	display: inline-block;
+	position: absolute;
+	}
+
+
+/* control positioning */
+
+.leaflet-control {
+	position: relative;
+	z-index: 800;
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+.leaflet-top,
+.leaflet-bottom {
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	}
+.leaflet-top {
+	top: 0;
+	}
+.leaflet-right {
+	right: 0;
+	}
+.leaflet-bottom {
+	bottom: 0;
+	}
+.leaflet-left {
+	left: 0;
+	}
+.leaflet-control {
+	float: left;
+	clear: both;
+	}
+.leaflet-right .leaflet-control {
+	float: right;
+	}
+.leaflet-top .leaflet-control {
+	margin-top: 10px;
+	}
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 10px;
+	}
+.leaflet-left .leaflet-control {
+	margin-left: 10px;
+	}
+.leaflet-right .leaflet-control {
+	margin-right: 10px;
+	}
+
+
+/* zoom and fade animations */
+
+.leaflet-fade-anim .leaflet-popup {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	opacity: 1;
+	}
+.leaflet-zoom-animated {
+	-webkit-transform-origin: 0 0;
+	    -ms-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	}
+svg.leaflet-zoom-animated {
+	will-change: transform;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+	}
+
+.leaflet-zoom-anim .leaflet-zoom-hide {
+	visibility: hidden;
+	}
+
+
+/* cursors */
+
+.leaflet-interactive {
+	cursor: pointer;
+	}
+.leaflet-grab {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
+	}
+.leaflet-popup-pane,
+.leaflet-control {
+	cursor: auto;
+	}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:         grabbing;
+	}
+
+/* marker & overlays interactivity */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: auto;
+	}
+
+/* visual tweaks */
+
+.leaflet-container {
+	background: #ddd;
+	outline-offset: 1px;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #38f;
+	background: rgba(255,255,255,0.5);
+	}
+
+
+/* general typography */
+.leaflet-container {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	}
+
+
+/* general toolbar styles */
+
+.leaflet-bar {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	border-radius: 4px;
+	}
+.leaflet-bar a {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	}
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+	background-color: #f4f4f4;
+	}
+.leaflet-bar a:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	}
+.leaflet-bar a:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom: none;
+	}
+.leaflet-bar a.leaflet-disabled {
+	cursor: default;
+	background-color: #f4f4f4;
+	color: #bbb;
+	}
+
+.leaflet-touch .leaflet-bar a {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	}
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	}
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	}
+
+/* zoom control */
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+	}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	font-size: 22px;
+	}
+
+
+/* layers control */
+
+.leaflet-control-layers {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+	}
+.leaflet-control-layers-toggle {
+	background-image: url(images/layers.png);
+	width: 36px;
+	height: 36px;
+	}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: url(images/layers-2x.png);
+	background-size: 26px 26px;
+	}
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	display: none;
+	}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+	display: block;
+	position: relative;
+	}
+.leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	color: #333;
+	background: #fff;
+	}
+.leaflet-control-layers-scrollbar {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	}
+.leaflet-control-layers-selector {
+	margin-top: 2px;
+	position: relative;
+	top: 1px;
+	}
+.leaflet-control-layers label {
+	display: block;
+	font-size: 13px;
+	font-size: 1.08333em;
+	}
+.leaflet-control-layers-separator {
+	height: 0;
+	border-top: 1px solid #ddd;
+	margin: 5px -10px 5px -6px;
+	}
+
+/* Default icon URLs */
+.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+	background-image: url(images/marker-icon.png);
+	}
+
+
+/* attribution and scale controls */
+
+.leaflet-container .leaflet-control-attribution {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+	padding: 0 5px;
+	color: #333;
+	line-height: 1.4;
+	}
+.leaflet-control-attribution a {
+	text-decoration: none;
+	}
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
+	text-decoration: underline;
+	}
+.leaflet-attribution-flag {
+	display: inline !important;
+	vertical-align: baseline !important;
+	width: 1em;
+	height: 0.6669em;
+	}
+.leaflet-left .leaflet-control-scale {
+	margin-left: 5px;
+	}
+.leaflet-bottom .leaflet-control-scale {
+	margin-bottom: 5px;
+	}
+.leaflet-control-scale-line {
+	border: 2px solid #777;
+	border-top: none;
+	line-height: 1.1;
+	padding: 2px 5px 1px;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px #fff;
+	}
+.leaflet-control-scale-line:not(:first-child) {
+	border-top: 2px solid #777;
+	border-bottom: none;
+	margin-top: -2px;
+	}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	border-bottom: 2px solid #777;
+	}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	box-shadow: none;
+	}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	}
+
+
+/* popup */
+
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 24px 13px 20px;
+	line-height: 1.3;
+	font-size: 13px;
+	font-size: 1.08333em;
+	min-height: 1px;
+	}
+.leaflet-popup-content p {
+	margin: 17px 0;
+	margin: 1.3em 0;
+	}
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+
+	margin: -10px auto 0;
+	pointer-events: auto;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	font: 16px/24px Tahoma, Verdana, sans-serif;
+	color: #757575;
+	text-decoration: none;
+	background: transparent;
+	}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #585858;
+	}
+.leaflet-popup-scrolled {
+	overflow: auto;
+	}
+
+.leaflet-oldie .leaflet-popup-content-wrapper {
+	-ms-zoom: 1;
+	}
+.leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+
+
+/* div icon */
+
+.leaflet-div-icon {
+	background: #fff;
+	border: 1px solid #666;
+	}
+
+
+/* Tooltip */
+/* Base styles for the element that has a tooltip */
+.leaflet-tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+.leaflet-tooltip.leaflet-interactive {
+	cursor: pointer;
+	pointer-events: auto;
+	}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	position: absolute;
+	pointer-events: none;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	}
+
+/* Directions */
+
+.leaflet-tooltip-bottom {
+	margin-top: 6px;
+}
+.leaflet-tooltip-top {
+	margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+	left: 50%;
+	margin-left: -6px;
+	}
+.leaflet-tooltip-top:before {
+	bottom: 0;
+	margin-bottom: -12px;
+	border-top-color: #fff;
+	}
+.leaflet-tooltip-bottom:before {
+	top: 0;
+	margin-top: -12px;
+	margin-left: -6px;
+	border-bottom-color: #fff;
+	}
+.leaflet-tooltip-left {
+	margin-left: -6px;
+}
+.leaflet-tooltip-right {
+	margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	top: 50%;
+	margin-top: -6px;
+	}
+.leaflet-tooltip-left:before {
+	right: 0;
+	margin-right: -12px;
+	border-left-color: #fff;
+	}
+.leaflet-tooltip-right:before {
+	left: 0;
+	margin-left: -12px;
+	border-right-color: #fff;
+	}
+
+/* Printing */
+
+@media print {
+	/* Prevent printers from removing background-images of controls. */
+	.leaflet-control {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+		}
+	}
+
+</style>
+<style>
+:root{
+  --ink:#0b1420;--night:#0f1b2b;--navy:#13233a;--card:#172a43;--card2:#1c3250;
+  --line:rgba(190,210,235,.12);--text:#e9eef4;--muted:#9fb0c3;--soft:#c7d3e0;
+  --gold:#d9a441;--gold2:#f0c46a;--green:#2f7a5c;
+  --js:#5aa2d6;--ja:#e0603f;--gc:#f0b93c;--hl:#a68be6;
+  --fam:#6fc3a0;--rom:#ef6f8f;--fri:#5aa2d6;--feud:#e0863f;--harm:#c94b4b;
+  --r:16px;--sh:0 12px 34px rgba(0,0,0,.35);
+  --display:"Fraunces",Georgia,serif;--jersey:"Bebas Neue",Impact,sans-serif;--body:"Source Sans 3",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font:16px/1.55 var(--body);background:var(--ink);
+  background-image:
+   repeating-linear-gradient(105deg,rgba(170,200,230,.035) 0 1px,transparent 1px 22px),
+   radial-gradient(1200px 600px at 80% -10%,rgba(217,164,65,.10),transparent 60%),
+   radial-gradient(900px 500px at -10% 10%,rgba(47,122,92,.16),transparent 60%),
+   linear-gradient(#0f1b2b,#0b1420 40%);
+  background-attachment:fixed;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
+a{color:var(--gold2)}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header */
+header.top{position:relative;padding:28px 0 8px;overflow:hidden}
+header.top .ghost{position:absolute;right:-20px;top:-40px;font:300px/1 var(--jersey);color:rgba(217,164,65,.07);pointer-events:none;user-select:none}
+.toprow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.hub{font:600 13px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.hub:hover{color:var(--gold2)}
+.spoilbtn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(217,164,65,.5);background:rgba(217,164,65,.08);border-radius:999px;padding:7px 14px;cursor:pointer;min-height:40px;font-weight:600;font-size:14px}
+.spoilbtn svg{width:18px;height:18px}
+h1{font:700 clamp(34px,6vw,62px)/1.02 var(--display);margin:18px 0 6px;letter-spacing:-.01em}
+h1 .num{font-family:var(--jersey);color:var(--gold);font-weight:400;letter-spacing:.02em}
+.sub{color:var(--soft);margin:0 0 4px;font-size:15px}
+.arcs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:13px;color:var(--soft)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+
+/* search */
+.gsearch{position:relative;margin:16px 0 0}
+.gsearch input{width:100%;padding:13px 16px 13px 44px;border-radius:14px;border:1px solid var(--line);background:rgba(11,20,32,.7);outline:none;font-size:16px}
+.gsearch input:focus{border-color:var(--gold)}
+.gsearch svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted)}
+.gresults{position:absolute;z-index:60;left:0;right:0;top:calc(100% + 6px);background:var(--navy);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh);max-height:60vh;overflow:auto;display:none}
+.gresults.on{display:block}
+.gres{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-bottom:1px solid var(--line);cursor:pointer}
+.gres:hover,.gres:focus{background:var(--card2);outline:none}
+.gres .k{font:12px var(--jersey);letter-spacing:.08em;color:var(--gold);min-width:74px;padding-top:3px;font-size:14px}
+.gres b{display:block}
+.gres small{color:var(--muted)}
+
+/* tabs */
+nav.tabs{position:sticky;top:0;z-index:50;background:rgba(11,20,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-top:18px}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-top:6px;padding-bottom:6px}
+nav.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{flex:none;border:0;background:transparent;padding:10px 14px;border-radius:10px;cursor:pointer;color:var(--muted);font-weight:600;font-size:15px;white-space:nowrap;min-height:44px}
+.tab .n{font-family:var(--jersey);font-size:16px;margin-right:6px;color:var(--gold);opacity:.7}
+.tab[aria-selected="true"]{background:var(--card);color:var(--text);box-shadow:inset 0 -2px 0 var(--gold)}
+main{padding:26px 0 30px}
+section.panel{display:none}
+section.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+h2{font:700 clamp(26px,4vw,36px)/1.1 var(--display);margin:0 0 6px}
+h3{font:600 20px/1.2 var(--display);margin:0}
+.lead{color:var(--soft);margin:0 0 16px;max-width:760px}
+.card{background:linear-gradient(180deg,var(--card),var(--navy));border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+.note{border-left:3px solid var(--gold);background:rgba(217,164,65,.07);padding:10px 14px;border-radius:0 12px 12px 0;color:var(--soft);font-size:14.5px;margin:12px 0}
+.mistake{display:flex;gap:10px;align-items:center;background:rgba(90,162,214,.08);border:1px dashed rgba(90,162,214,.4);border-radius:12px;padding:10px 14px;font-size:14.5px;color:var(--soft);margin:18px 0}
+.mistake a{font-weight:700}
+
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
+.controls input[type=search],.controls select{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(11,20,32,.7);min-height:44px;outline:none}
+.controls input[type=search]{flex:1 1 220px}
+.controls select{flex:0 1 auto;max-width:100%}
+.chip{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:14px;font-weight:600;min-height:40px;display:inline-flex;align-items:center;gap:7px}
+.chip[aria-pressed="true"]{background:var(--gold);color:#1a1205;border-color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(217,164,65,.55);color:var(--text);background:transparent;cursor:pointer;min-height:42px}
+.btn.gold{background:var(--gold);color:#1a1205;border-color:var(--gold)}
+.btn.ghost{border-color:var(--line)}
+.btn:hover{filter:brightness(1.08)}
+.count{color:var(--muted);font-size:14px;margin:-6px 0 12px}
+
+/* reading order */
+.ro{margin:0 0 22px;overflow:hidden}
+.ro-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;background:transparent;border:0;cursor:pointer;text-align:left;min-height:56px}
+.ro-head .t{font:600 18px var(--display)}
+.ro-head .t span{font-family:var(--jersey);color:var(--gold);font-size:22px;margin-right:8px;letter-spacing:.03em}
+.ro-head .chev{transition:transform .2s;width:20px;height:20px;color:var(--gold)}
+.ro.open .chev{transform:rotate(180deg)}
+.ro-body{display:none;padding:0 18px 18px}
+.ro.open .ro-body{display:block}
+.ro-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:6px}
+@media(min-width:760px){.ro-list{grid-template-columns:repeat(3,1fr)}}
+.ro-list li a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.04);text-decoration:none;color:var(--text);border:1px solid transparent}
+.ro-list li a:hover{border-color:var(--line);background:rgba(255,255,255,.07)}
+.ro-list .no{font:22px var(--jersey);color:var(--gold);width:24px;text-align:center}
+.ro-list .yr{margin-left:auto;color:var(--muted);font-size:13px}
+.ro-list .soon{opacity:.6}
+.poster-frame{width:100%;border:0;margin-top:14px;min-height:560px;display:block;background:transparent}
+.ro-sub{font:600 15px var(--display);margin:18px 0 0;color:var(--soft)}
+
+/* books */
+.books{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:700px){.books{grid-template-columns:1fr 1fr}}
+@media(min-width:1050px){.books{grid-template-columns:1fr 1fr 1fr}}
+.book{display:flex;flex-direction:column;overflow:hidden;scroll-margin-top:80px}
+.book.flash{outline:2px solid var(--gold);outline-offset:2px}
+.bk-top{display:flex;gap:14px;padding:16px}
+.cover{width:104px;flex:none;aspect-ratio:2/3;border-radius:8px;position:relative;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.cover .spine{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center}
+.cover .spine b{font:64px/0.9 var(--jersey)}
+.cover .spine i{font:600 13px var(--display);font-style:normal;opacity:.9}
+.cover .badge{position:absolute;top:6px;left:6px;background:var(--gold);color:#1a1205;font:18px/1 var(--jersey);border-radius:6px;padding:4px 6px 2px;z-index:2}
+.bk-meta{min-width:0}
+.bk-meta .arc{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;margin-bottom:4px}
+.bk-meta h3{font-size:22px}
+.bk-meta .yr{color:var(--muted);font-size:14px;margin-top:2px}
+.bk-meta .pov{font-size:14px;color:var(--soft);margin-top:6px}
+.bk-body{padding:0 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.bk-body p{margin:0;color:var(--soft);font-size:15px}
+.lbl{font:15px var(--jersey);letter-spacing:.08em;color:var(--gold);display:block;margin-bottom:2px}
+.names{display:flex;flex-wrap:wrap;gap:6px}
+.name{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:4px 10px;font-size:13.5px;cursor:pointer}
+.name:hover{border-color:var(--gold)}
+.bk-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.book.upcoming{border-style:dashed;opacity:.92}
+
+/* spoilers */
+.spoil.hide{filter:blur(6px);cursor:pointer;user-select:none;border-radius:4px;background:rgba(255,255,255,.04);transition:filter .2s}
+.spoil.hide:hover{filter:blur(4px)}
+.spoil.hide::after{content:""}
+.spoil-tag{display:inline-block;font:12px var(--jersey);letter-spacing:.08em;color:var(--ink);background:var(--muted);border-radius:4px;padding:2px 5px 0;margin-left:4px;vertical-align:middle}
+.hiddenmsg{color:var(--muted);font-size:13.5px;font-style:italic}
+
+/* characters */
+.chars{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:700px){.chars{grid-template-columns:1fr 1fr}}
+@media(min-width:1050px){.chars{grid-template-columns:1fr 1fr 1fr}}
+.ch{padding:16px;display:flex;flex-direction:column;gap:9px;scroll-margin-top:80px}
+.ch.flash{outline:2px solid var(--gold);outline-offset:2px}
+.ch-head{display:flex;gap:12px;align-items:center}
+.avatar{width:52px;height:52px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:26px var(--jersey);color:#0b1420}
+.ch-head h3{font-size:20px}
+.ch-head .say{font-size:13.5px;color:var(--muted)}
+.role{font:13px var(--jersey);letter-spacing:.08em;padding:3px 8px 1px;border-radius:6px;margin-left:auto;align-self:flex-start;white-space:nowrap}
+.role.main{background:rgba(217,164,65,.18);color:var(--gold2)}
+.role.supporting{background:rgba(90,162,214,.16);color:#9cc8ea}
+.role.antagonist{background:rgba(201,75,75,.18);color:#f19a9a}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14.5px;margin:0}
+.facts dt{font:14px var(--jersey);letter-spacing:.07em;color:var(--gold);padding-top:2px;white-space:nowrap}
+.facts dd{margin:0;color:var(--soft)}
+.ch-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ch-actions .btn{padding:7px 12px;min-height:38px;font-size:13px}
+
+/* timeline */
+.tl{position:relative;margin:0;padding:0 0 0 22px;list-style:none}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),rgba(217,164,65,.1))}
+.tl li{position:relative;margin:0 0 14px;padding:12px 14px;scroll-margin-top:80px}
+.tl li::before{content:"";position:absolute;left:-21px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--ink);border:2px solid var(--gold)}
+.tl .when{font:18px var(--jersey);letter-spacing:.05em;color:var(--gold)}
+.tl .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tl .tg{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
+.subtabs{display:flex;gap:8px;margin:0 0 16px;flex-wrap:wrap}
+.places{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:700px){.places{grid-template-columns:1fr 1fr}}
+.place{padding:14px 16px;scroll-margin-top:80px}
+.place.flash{outline:2px solid var(--gold)}
+.place .kind{font:13px var(--jersey);letter-spacing:.08em;color:var(--muted)}
+.place p{margin:6px 0 0;color:var(--soft);font-size:14.5px}
+#leaf{height:380px;border-radius:var(--r);border:1px solid var(--line);z-index:1}
+.townmap{width:100%;height:auto;display:block;border-radius:var(--r);border:1px solid var(--line);background:#10213a}
+.townmap .pin{cursor:pointer}
+.townmap .pin:hover circle,.townmap .pin:focus circle{stroke:#fff;stroke-width:3}
+.maps{display:grid;gap:16px;grid-template-columns:1fr;margin-bottom:18px}
+@media(min-width:900px){.maps{grid-template-columns:1fr 1fr}}
+.maps figure{margin:0}
+.maps figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* recaps */
+.recaps{display:grid;gap:14px}
+details.recap{overflow:hidden;scroll-margin-top:80px}
+details.recap summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 16px;min-height:60px}
+details.recap summary::-webkit-details-marker{display:none}
+details.recap summary .no{font:30px/1 var(--jersey);color:var(--gold);width:30px;text-align:center}
+details.recap summary .meta{color:var(--muted);font-size:13.5px}
+details.recap summary .chev{margin-left:auto;width:20px;height:20px;color:var(--gold);transition:transform .2s;flex:none}
+details.recap[open] summary .chev{transform:rotate(180deg)}
+.rc-body{padding:0 16px 16px;display:grid;gap:14px}
+@media(min-width:800px){.rc-body{grid-template-columns:1fr 1fr}}
+.rc-box{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.rc-box ul{margin:4px 0 0;padding-left:18px;color:var(--soft);font-size:14.5px}
+.rc-box li{margin:4px 0}
+.rc-box p{margin:4px 0 0;color:var(--soft);font-size:14.5px}
+.rc-box.remember{background:rgba(217,164,65,.08);border-color:rgba(217,164,65,.35)}
+.rc-box.full{grid-column:1/-1}
+.rc-gate{grid-column:1/-1;text-align:center;padding:18px;color:var(--soft)}
+
+/* family tree */
+.fam-grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:900px){.fam-grid{grid-template-columns:1fr 1fr}}
+.fam{padding:14px 10px 16px}
+.fam h3{padding:0 8px 2px;display:flex;gap:8px;align-items:center}
+.fam .fam-note{padding:0 8px;color:var(--muted);font-size:13px;margin:2px 0 6px}
+.treewrap{overflow-x:auto;padding:8px 0 4px}
+.tree,.tree ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center}
+.tree{min-width:max-content;padding:0 8px}
+.tree ul{padding-top:18px;position:relative}
+.tree li{position:relative;padding:18px 5px 0;display:flex;flex-direction:column;align-items:center}
+.tree li::before,.tree li::after{content:"";position:absolute;top:0;right:50%;width:50%;height:18px;border-top:2px solid rgba(217,164,65,.45)}
+.tree li::after{right:auto;left:50%;border-left:2px solid rgba(217,164,65,.45)}
+.tree li:only-child::before,.tree li:only-child::after{display:none}
+.tree li:only-child{padding-top:0}
+.tree li:first-child::before,.tree li:last-child::after{border:0 none}
+.tree li:last-child::before{border-right:2px solid rgba(217,164,65,.45);border-radius:0 6px 0 0}
+.tree li:first-child::after{border-radius:6px 0 0 0}
+.tree ul::before{content:"";position:absolute;top:0;left:50%;border-left:2px solid rgba(217,164,65,.45);height:18px}
+.tree > li{padding-top:0}
+.tree > li::before,.tree > li::after{display:none}
+.unit{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:5px}
+.unit .heart{color:var(--rom);font-size:13px}
+.person{border:0;background:var(--card2);border-radius:9px;padding:6px 9px;cursor:pointer;font-size:13.5px;font-weight:600;line-height:1.15;text-align:center;min-height:38px;border-bottom:3px solid var(--c,var(--muted));transition:opacity .2s,transform .15s}
+.person small{display:block;font-weight:400;color:var(--muted);font-size:11.5px}
+.person.dead{opacity:.85}
+.person.dead::after{content:" †";color:var(--muted)}
+.focusmode .person{opacity:.28}
+.focusmode .person.f-self{opacity:1;outline:2px solid var(--gold);transform:scale(1.05)}
+.focusmode .person.f-rel{opacity:1}
+.focuspanel{position:sticky;bottom:12px;z-index:40;margin:16px 0 0;padding:14px 16px;display:none;max-height:38vh;overflow:auto;box-shadow:0 -10px 40px rgba(0,0,0,.5)}
+.focuspanel.on{display:block}
+.focuspanel .fp-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.focuspanel .fp-head h3{font-size:19px}
+.focuspanel .x{margin-left:auto}
+.fp-list{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14.5px}
+.fp-list dt{font:14px var(--jersey);letter-spacing:.07em;color:var(--gold);padding-top:2px}
+.fp-list dd{margin:0;color:var(--soft)}
+.linky{color:var(--gold2);cursor:pointer;text-decoration:underline;text-decoration-color:rgba(240,196,106,.35);background:none;border:0;padding:0;font:inherit}
+
+/* connections */
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13.5px;color:var(--soft);margin:0 0 10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:22px;height:0;border-top:3px solid;display:inline-block}
+.netwrap{overflow:auto;border-radius:var(--r);border:1px solid var(--line);background:radial-gradient(800px 500px at 50% 40%,#152a46,#0b1420);touch-action:pan-x pan-y}
+#net{display:block;width:100%;min-width:720px;height:auto}
+#net .node{cursor:pointer}
+#net .node circle{stroke:#0b1420;stroke-width:3}
+#net .node text{font:600 13px var(--body);fill:var(--text);paint-order:stroke;stroke:#0b1420;stroke-width:4px;stroke-linejoin:round;pointer-events:none}
+#net .edge{stroke-width:2.2;opacity:.55;fill:none}
+#net.focus .edge{opacity:.06}
+#net.focus .edge.on{opacity:.95;stroke-width:3.2}
+#net.focus .node{opacity:.22}
+#net.focus .node.on{opacity:1}
+#net.focus .node.self circle{stroke:var(--gold);stroke-width:4}
+.zoom{display:flex;gap:6px;margin:8px 0 0;justify-content:flex-end}
+.zoom button{width:42px;height:42px;border-radius:10px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:20px}
+.connlist{display:grid;gap:8px;margin-top:6px}
+.conn-item{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--soft)}
+.conn-item .ty{flex:none;font:12px var(--jersey);letter-spacing:.08em;padding:3px 7px 1px;border-radius:5px;color:#0b1420;margin-top:2px}
+.hiddencount{color:var(--muted);font-size:13.5px;margin-top:8px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(5,10,18,.72);backdrop-filter:blur(6px);display:none;align-items:flex-end;justify-content:center;padding:16px}
+.modal.on{display:flex}
+@media(min-width:640px){.modal{align-items:center}}
+.modal .box{max-width:520px;width:100%;padding:22px;max-height:88vh;overflow:auto}
+.modal .eyebrow{font:15px var(--jersey);letter-spacing:.1em;color:var(--gold)}
+.modal h2{font-size:28px;margin:4px 0 8px}
+.modal p{color:var(--soft);font-size:15px;margin:0 0 12px}
+.prog{display:grid;gap:6px;margin:10px 0 16px}
+.prog label{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;border:1px solid var(--line);cursor:pointer;background:rgba(255,255,255,.03)}
+.prog label:has(input:checked){border-color:var(--gold);background:rgba(217,164,65,.1)}
+.prog input{accent-color:var(--gold);width:18px;height:18px}
+.prog .no{font:20px var(--jersey);color:var(--gold);width:20px;text-align:center}
+.modal .acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+
+/* footer */
+footer{border-top:1px solid var(--line);margin-top:30px;padding:30px 0 40px;background:linear-gradient(transparent,rgba(0,0,0,.25))}
+.f-btns{display:flex;flex-direction:column;gap:10px;align-items:center}
+.f-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.f-btns .btn{min-width:200px}
+.f-row{width:100%;max-width:440px;flex-wrap:nowrap}
+.f-row .btn{min-width:0;flex:1 1 0;padding-left:10px;padding-right:10px}
+.btn svg{width:18px;height:18px}
+.fine{text-align:center;color:var(--muted);font-size:13.5px;max-width:720px;margin:18px auto 0}
+.fine p{margin:6px 0}
+.fine .part a{color:var(--soft)}
+
+/* bottom icon tabs (mobile) */
+.bnav{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(11,20,32,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:block;padding:4px 4px calc(4px + env(safe-area-inset-bottom))}
+.bnav .in{display:grid;grid-template-columns:repeat(6,1fr);max-width:640px;margin:0 auto}
+.bnav button{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;font:600 10.5px var(--body);cursor:pointer;min-height:54px;border-radius:10px;line-height:1.1}
+.bnav svg{width:22px;height:22px}
+.bnav button[aria-current="page"]{color:var(--gold2);background:rgba(217,164,65,.1)}
+body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}#toTop{bottom:calc(84px + env(safe-area-inset-bottom))}.focuspanel{bottom:84px}
+@media(min-width:900px){.bnav button{flex-direction:row;justify-content:center;gap:8px;font-size:14px;min-height:48px}.bnav .in{max-width:980px}}
+/* back to top */
+#toTop{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:70;width:48px;height:48px;border-radius:50%;border:1px solid rgba(217,164,65,.6);background:rgba(19,35,58,.92);color:var(--gold);cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:var(--sh)}
+#toTop.on{display:flex}
+#toTop svg{width:22px;height:22px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="ghost" aria-hidden="true">13</div>
+  <div class="wrap">
+    <div class="toprow">
+      <a class="hub" href="https://readersatlas.com">← The Reader’s Atlas</a>
+      <button class="spoilbtn" id="spoilBtn" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span id="spoilLabel">Spoilers</span>
+      </button>
+    </div>
+    <h1>The Boys of <span class="num">Tommen</span><br><span style="font-size:.55em;font-weight:600">A Reader’s Guide to Chloe Walsh’s series</span></h1>
+    <p class="sub">Unofficial · Work in progress · 6 books + 1 coming · Ballylaggin, Co. Cork</p>
+    <div class="gsearch" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <label class="sr" for="gq">Search the whole guide</label>
+      <input id="gq" type="search" placeholder="Search everything: names, books, places, moments…" autocomplete="off">
+      <div class="gresults" id="gres" role="listbox"></div>
+    </div>
+  </div>
+</header>
+
+
+<main class="wrap">
+
+<!-- BOOK GUIDE -->
+<section class="panel on" id="p-books" role="tabpanel">
+  <h2>Book Guide</h2>
+  <p class="lead">Every Boys of Tommen book in the recommended reading order, each with its main plot, who it follows, a buy link and a jump to its recap.</p>
+
+  <div class="card ro" id="ro">
+    <button class="ro-head" id="roHead" aria-expanded="false" aria-controls="roBody">
+      <span class="t"><span>Reading order</span>· <b id="roCount"></b></span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="ro-body" id="roBody">
+      <div class="controls" style="margin-top:2px">
+        <label class="sr" for="roArc">Filter reading order by story arc</label>
+        <select id="roArc"></select>
+      </div>
+      <ol class="ro-list" id="roList"></ol>
+      <div class="note">Releasing 10 is the earliest story in time (1991–2004), but read it last: it reveals the big secret of Taming 7.</div>
+      <p class="ro-sub">Reading-order poster</p>
+      <iframe class="poster-frame" id="posterFrame" data-arc="all" title="Reading-order poster with book covers" loading="lazy" src="poster.html"></iframe>
+    </div>
+  </div>
+
+  <div class="controls">
+    <label class="sr" for="bkArc">Filter books by story arc</label>
+    <select id="bkArc"></select>
+  </div>
+  <div class="books" id="books"></div>
+  <div class="mistake">✍️ <span>Find a mistake? If you spot something that needs fixing, message me on Instagram at <a href="https://www.instagram.com/readers.atlas" target="_blank" rel="noopener">@readers.atlas</a>.</span></div>
+</section>
+
+<!-- CHARACTERS -->
+<section class="panel" id="p-chars" role="tabpanel">
+  <h2>Characters</h2>
+  <p class="lead">The full cast: how to say their names, where they’re from, who they love and what happens to them. Anything past your reading point stays blurred until you tap it.</p>
+  <div class="controls">
+    <label class="sr" for="cq">Search characters</label>
+    <input type="search" id="cq" placeholder="Type a name, nickname, job…">
+    <label class="sr" for="cBook">Filter by book</label>
+    <select id="cBook"></select>
+    <label class="sr" for="cArc">Filter by story arc</label>
+    <select id="cArc"></select>
+  </div>
+  <div class="controls" id="roleChips" role="group" aria-label="Filter by role"></div>
+  <p class="count" id="cCount"></p>
+  <div class="chars" id="chars"></div>
+  <div class="mistake">✍️ <span>Find a mistake? If you spot something that needs fixing, message me on Instagram at <a href="https://www.instagram.com/readers.atlas" target="_blank" rel="noopener">@readers.atlas</a>.</span></div>
+</section>
+
+<!-- TIMELINE & TOWNS -->
+<section class="panel" id="p-time" role="tabpanel">
+  <h2>Timeline &amp; Towns</h2>
+  <p class="lead">From the Youngs’ move to Cork in 1991 to New Year’s Eve 2005, plus the places that matter in Ballylaggin and beyond.</p>
+  <div class="subtabs" role="group" aria-label="Choose view">
+    <button class="chip" data-sub="timeline" aria-pressed="true">Timeline</button>
+    <button class="chip" data-sub="towns" aria-pressed="false">Towns &amp; map</button>
+  </div>
+
+  <div id="sub-timeline">
+    <div class="controls">
+      <label class="sr" for="tq">Search timeline</label>
+      <input type="search" id="tq" placeholder="Search events…">
+      <label class="sr" for="tBook">Filter by book</label>
+      <select id="tBook"></select>
+      <label class="sr" for="tArc">Filter by story arc</label>
+      <select id="tArc"></select>
+    </div>
+    <ol class="tl" id="tl"></ol>
+  </div>
+
+  <div id="sub-towns" hidden>
+    <div class="maps">
+      <figure>
+        <div id="leaf" role="region" aria-label="Map of Ireland with story locations"></div>
+        <figcaption>Real places. Ballylaggin is fictional, so its pin is placed roughly in County Cork.</figcaption>
+      </figure>
+      <figure>
+        <svg class="townmap" id="town" viewBox="0 0 600 420" role="img" aria-label="Illustrated sketch of Ballylaggin, not to scale"></svg>
+        <figcaption>Ballylaggin sketch, not to scale. Tap a pin for the place card.</figcaption>
+      </figure>
+    </div>
+    <div class="controls" id="placeChips" role="group" aria-label="Filter places"></div>
+    <div class="places" id="places"></div>
+  </div>
+</section>
+
+<!-- RECAPS -->
+<section class="panel" id="p-recaps" role="tabpanel">
+  <h2>Recaps</h2>
+  <p class="lead">For when the next book lands a year later and you’ve forgotten everything. Each recap gives where it starts, what happens, how it ends and what to remember going into the next book.</p>
+  <div class="note">Full spoilers for that book. Recaps for books past your reading point stay locked until you open them on purpose.</div>
+  <div class="controls">
+    <label class="sr" for="rq">Search recaps</label>
+    <input type="search" id="rq" placeholder="Search recaps…">
+    <label class="sr" for="rArc">Filter by story arc</label>
+    <select id="rArc"></select>
+  </div>
+  <div class="recaps" id="recaps"></div>
+</section>
+
+<!-- FAMILY TREE -->
+<section class="panel" id="p-tree" role="tabpanel">
+  <h2>Family Tree</h2>
+  <p class="lead">Parents, children, partners and siblings for every family. Tap anyone to focus on them and see how they’re related.</p>
+  <div class="legend"><span><span style="color:var(--rom)">♥</span> partner / spouse</span><span>† died in the series</span><span>Lines = parent → child</span></div>
+  <div class="fam-grid" id="famGrid"></div>
+  <p class="hiddencount" id="treeHidden"></p>
+  <div class="card focuspanel" id="treePanel" aria-live="polite"></div>
+</section>
+
+<!-- CONNECTIONS -->
+<section class="panel" id="p-conn" role="tabpanel">
+  <h2>Connections Map</h2>
+  <p class="lead">Every family tie, romance, friendship and feud. Tap a name to focus on their connections and see why each one matters.</p>
+  <div class="controls" id="connChips" role="group" aria-label="Filter connection types"></div>
+  <div class="legend" id="connLegend"></div>
+  <div class="netwrap" id="netwrap"><svg id="net" viewBox="0 0 1000 760" role="img" aria-label="Character connections network"></svg></div>
+  <div class="zoom"><button id="zOut" aria-label="Zoom out">−</button><button id="zIn" aria-label="Zoom in">+</button></div>
+  <p class="hiddencount" id="connHidden"></p>
+  <div class="card focuspanel" id="connPanel" aria-live="polite"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-btns">
+      <button class="btn gold" id="goBooks">Go to Book Guide</button>
+      <a class="btn" href="https://ko-fi.com/readersatlas" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+      <div class="f-row">
+        <button class="btn ghost" id="shareBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg><span>Share</span></button>
+        <a class="btn ghost" href="scrapbook.html">✎ Quote collage</a>
+      </div>
+      <div class="f-row">
+        <a class="btn ghost" href="https://www.instagram.com/readers.atlas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@readers.atlas</a>
+        <a class="btn ghost" href="https://www.tiktok.com/@readers.atlas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.4 2 1.7 3.4 3.9 3.6v3.1c-1.4.1-2.7-.3-3.9-1.1v6.6c0 3.4-2.6 5.8-5.7 5.8A5.6 5.6 0 0 1 5.3 15c0-3.5 3.2-6.1 6.7-5.5v3.3c-1.6-.4-3.4.6-3.4 2.3 0 1.4 1.1 2.4 2.4 2.4 1.5 0 2.5-1 2.5-2.9V3h3.1z"/></svg>TikTok</a>
+      </div>
+      <a class="btn ghost" href="https://readersatlas.com">More guides at The Reader’s Atlas</a>
+    </div>
+    <div class="fine">
+      <p>Fan-made guide, not affiliated with Chloe Walsh, Bloom Books (Sourcebooks) or Piatkus. All characters and worlds belong to their creators.</p>
+      <p>Some book links may be affiliate links, which means I may earn a small commission at no extra cost to you.</p>
+      <p>The books deal with abuse, addiction, self-harm, suicide and grief. Please check content warnings before reading.</p>
+      <p class="part">Part of <a href="https://readersatlas.com">The Reader’s Atlas</a> · <a href="https://www.instagram.com/readers.atlas" target="_blank" rel="noopener">@readers.atlas on Instagram</a> · <a href="https://www.tiktok.com/@readers.atlas" target="_blank" rel="noopener">@readers.atlas on TikTok</a> · <a href="https://ko-fi.com/readersatlas" target="_blank" rel="noopener">Ko-fi</a></p>
+    </div>
+  </div>
+</footer>
+
+<nav class="bnav" aria-label="Sections"><div class="in">
+ <button data-bt="books"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Books</button>
+ <button data-bt="chars"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.6c2.6.2 4.4 1.9 5 5.4"/></svg>Cast</button>
+ <button data-bt="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Timeline</button>
+ <button data-bt="recaps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>Recaps</button>
+ <button data-bt="tree"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="5" rx="1.2"/><rect x="2.5" y="16.5" width="6" height="5" rx="1.2"/><rect x="15.5" y="16.5" width="6" height="5" rx="1.2"/><path d="M12 7.5V12M5.5 16.5V12h13v4.5"/></svg>Family</button>
+ <button data-bt="conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.3 7.2 10.7 16M16.7 7.2 13.3 16M7.5 6h9"/></svg>Links</button>
+</div></nav>
+<button id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 15 6-6 6 6"/></svg></button>
+
+<div class="modal" id="spoilModal" role="dialog" aria-modal="true" aria-labelledby="smTitle">
+  <div class="card box">
+    <div class="eyebrow">Spoiler warning</div>
+    <h2 id="smTitle">How far have you read?</h2>
+    <p>Pick the book you’re reading now in the recommended order. Anything from later books is blurred, and you can tap a blurred bit to reveal it. Use the eye button at the top to change this. Your choice is saved on this device.</p>
+    <div class="prog" id="progList"></div>
+    <div class="acts">
+      <button class="btn ghost" id="smAll">I don’t mind spoilers</button>
+      <button class="btn gold" id="smDone">Done</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script>
+/* =========================================================
+   SETTINGS: paste your affiliate links here when they're ready.
+   Leave a link as "" and the button falls back to a Booktopia search.
+   ========================================================= */
+const AFFILIATE = {
+  b13:"", k13:"", s6:"", r6:"", t7:"", r10:""
+};
+
+/* ---------- storage (safe) ---------- */
+const store={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v);}catch(e){return d;}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- DATA ---------- */
+const ARCS={
+  js:{name:"Johnny & Shannon",c:"var(--js)",hex:"#5aa2d6"},
+  ja:{name:"Joey & Aoife",c:"var(--ja)",hex:"#e0603f"},
+  gc:{name:"Gibsie & Claire",c:"var(--gc)",hex:"#f0b93c"},
+  hl:{name:"Hughie & Lizzie",c:"var(--hl)",hex:"#a68be6"}
+};
+
+const BOOKS=[
+ {id:"b13",n:1,title:"Binding 13",year:2018,arc:"js",isbn:["9781728299945","9780349439242"],
+  pov:"Shannon Lynch & Johnny Kavanagh",set:"Ballylaggin · January–spring 2005",
+  plot:"Fifteen-year-old Shannon Lynch transfers to Tommen College to escape years of bullying, hoping to be invisible. On her first day a rugby ball kicked by Tommen’s captain, Johnny Kavanagh, knocks her out cold. Johnny is a rising star with the Academy scouts watching and a serious injury he’s hiding from everyone. He can’t stay away from the quiet new girl, even as he starts to suspect that what’s happening to her at home is far worse than school bullies.",
+  chars:["shannon","johnny","gibsie","claire","lizzie","joey","hugh","feely","bella"]},
+ {id:"k13",n:2,title:"Keeping 13",year:2018,arc:"js",isbn:["9781728299976","9780349439273"],
+  pov:"Shannon Lynch & Johnny Kavanagh",set:"Ballylaggin & Dublin · spring–autumn 2005",
+  plot:"Picking up minutes after Binding 13, Shannon and Johnny have to face what happened in the Lynch kitchen. The secret is out, the family is splintering, and Johnny refuses to look away. Their first love is tested by courtrooms, social workers, Shannon’s brothers and the father who still has a hold on all of them.",
+  chars:["shannon","johnny","joey","darren","marie","teddy","edel","johnsr","gibsie","claire"]},
+ {id:"s6",n:3,title:"Saving 6",year:2023,arc:"ja",isbn:["9781464215995"],
+  pov:"Joey Lynch & Aoife Molloy",set:"Ballylaggin · February 2000–winter 2004",
+  plot:"Rewind five years. Joey Lynch is the hurling prodigy at Ballylaggin Community School (BCS) who takes his father’s fists so his siblings don’t have to. Aoife Molloy is the loud, stubborn blonde who won’t let him push her away. Across five school years, a fierce friendship becomes the love story behind everything Shannon couldn’t see in the first two books.",
+  chars:["joey","aoife","tony","trish","kevin","casey","shannon","teddy","marie"]},
+ {id:"r6",n:4,title:"Redeeming 6",year:2023,arc:"ja",isbn:["9781464216022"],
+  pov:"Joey Lynch & Aoife Molloy",set:"Ballylaggin · 2005, overlapping Binding 13 & Keeping 13",
+  plot:"Joey and Aoife are broken up, heartbroken and still orbiting each other. This book runs right alongside Binding 13 and Keeping 13, showing the same months from Joey’s side. It’s about addiction, recovery and the life-changing news that means Joey has to decide what kind of man he’s going to be.",
+  chars:["joey","aoife","tony","kevin","shannon","johnny","edel","darren","teddy","marie","tadhg"]},
+ {id:"t7",n:5,title:"Taming 7",year:2024,arc:"gc",isbn:["9781464216053"],
+  pov:"Gerard “Gibsie” Gibson & Claire Biggs",set:"Ballylaggin · May 1995, then autumn–winter 2005",
+  plot:"Gibsie is Tommen’s class clown and Claire is its ray of sunshine. They’ve been inseparable since a tragedy when they were small. In their final year at Tommen they finally admit they’re more than friends, just as someone from Gibsie’s past comes home and the pain hidden behind his jokes starts to surface.",
+  chars:["gibsie","claire","hugh","lizzie","sadhbh","keith","mark","johnny","shannon","sinead","peter"]},
+ {id:"r10",n:6,title:"Releasing 10",year:2025,arc:"hl",isbn:["9781464237232","9780349439341"],
+  pov:"Lizzie Young & Hugh “Hughie” Biggs",set:"England & Ballylaggin · 1991–April 2004",
+  plot:"The prequel that rewires the series. Lizzie Young, living with selective mutism and early-onset bipolar disorder, and Hugh Biggs, the steady boy who becomes her anchor, grow up together through hospitals, grief and a friend group that cracks apart. It’s told from childhood to just before Shannon arrives at Tommen, and it explains why Lizzie is the way she is.",
+  chars:["lizzie","hugh","caoimhe","mike","catherine","claire","gibsie","feely","mark","katie","pierce"]},
+ {id:"next",n:7,title:"Book 7",year:"TBA",arc:null,upcoming:true,isbn:[],
+  pov:"Not yet announced",set:"—",
+  plot:"Chloe Walsh has confirmed more Boys of Tommen books are coming, but the next title, couple and release date haven’t been officially announced. Fans expect a second book for Hughie and Lizzie and a second for Gibsie and Claire. Separately, a Prime Video series based on the first two books has been announced. I’ll update this card as soon as there’s news.",
+  chars:[]}
+];
+const READ=BOOKS.filter(b=>!b.upcoming);
+
+/* characters: s* = book number where that detail is revealed (spoiler level) */
+const CHARS=[
+ {id:"shannon",name:"Shannon Lynch",nick:"Shannon like the river",say:"SHAN-un LINCH",from:"Ballylaggin, Co. Cork (council estate)",arc:"js",role:"main",first:1,in:[1,2,3,4,5,6],
+  feat:"Tiny and slight, often mistaken for younger. Long dark hair and big blue eyes. Quiet, polite and painfully self-conscious, with a dry, unexpected wit.",
+  about:"The only Lynch girl, caught between a violent father, a mother who won’t leave and five brothers. Bullied for years at her old school, she moves to Tommen to disappear.",
+  job:"Student at Tommen College (transfers mid-year)",love:"Johnny Kavanagh",loveS:1,age:"15, turns 16 in Binding 13",
+  big:"Tells Johnny that her father is the one hurting her, then survives a brutal attack at home.",bigS:1,
+  later:"Survives the fire that kills both her parents and moves in with the Kavanaghs, who become guardians to her and her brothers. She starts counselling and settles into a steady relationship with Johnny.",laterS:2},
+ {id:"johnny",name:"Johnny Kavanagh",nick:"Cap · 13",say:"JON-ee KAV-uh-nah",from:"Dublin, moved to Ballylaggin",arc:"js",role:"main",first:1,in:[1,2,4,5,6],
+  feat:"Tall, broad and intense, with a famously filthy mouth. Wears 13 at outside centre. Runs on discipline, training plans and very little sleep.",
+  about:"Tommen’s rugby captain and the boy the Academy scouts are watching. He’s fiercely protective and blunt, with a big heart he hides behind a temper.",
+  job:"Tommen rugby captain; Ireland underage and Academy prospect",love:"Shannon Lynch",loveS:1,age:"17",
+  big:"Plays through a torn groin injury until a match against Royce College puts him in surgery. Later he calls the authorities on Teddy Lynch and goes back into the burning house for Shannon’s brothers.",bigS:2,
+  later:"Plays for Ireland the following summer, then turns down a professional contract to finish his final year at Tommen. He’s Gibsie’s rock through the fallout of Taming 7.",laterS:5},
+ {id:"joey",name:"Joey Lynch",nick:"Joe · 6",say:"JOE-ee LINCH",from:"Ballylaggin, Co. Cork",arc:"ja",role:"main",first:1,in:[1,2,3,4,5],
+  feat:"Scarred, sharp-tongued and quick with his fists. Wears 6 for hurling. Smokes and swears constantly and rarely smiles.",
+  about:"Shannon’s older brother and the one who stands between their father and the younger kids. He works at Tony Molloy’s garage and holds the family together while slowly coming apart himself.",
+  job:"Student at BCS, hurler, apprentice mechanic at Tony Molloy’s garage",love:"Aoife Molloy",loveS:1,age:"18",
+  big:"Aoife finds him close to a heroin overdose, and he ends things to protect her. In Redeeming 6 he finally goes to rehab.",bigS:3,
+  later:"Comes out of rehab clean, becomes dad to baby AJ and starts at Tommen. He moves into an annex at the Kavanaghs’ with Aoife and their son.",laterS:4},
+ {id:"aoife",name:"Aoife Molloy",nick:"Molloy",say:"EE-fuh muh-LOY",from:"Ballylaggin, Co. Cork",arc:"ja",role:"main",first:1,in:[1,2,3,4,5],
+  feat:"Blonde, loud, gorgeous and completely unbothered by what anyone thinks. Stubborn to the bone.",
+  about:"Daughter of Joey’s boss Tony, twin to Kevin, and the one person Joey can’t scare off. Under the swagger she’s the most loyal person in the series.",
+  job:"Student at BCS",love:"Joey Lynch",loveS:1,age:"18 (birthday 18 September)",
+  big:"Saves Joey from an overdose. Then she finds out she’s pregnant.",bigS:4,
+  later:"Gives birth to Anthony Joseph “AJ” Lynch and gives Joey one last chance. By Taming 7 she’s the straight-talking older voice the Tommen girls go to for advice.",laterS:5},
+ {id:"gibsie",name:"Gerard “Gibsie” Gibson",nick:"Gibs · 7",say:"jeh-RARD “GIB-zee” GIB-sun",from:"Ballylaggin, Co. Cork",arc:"gc",role:"main",first:1,in:[1,2,4,5,6],
+  feat:"Big, golden and goofy, Tommen’s class clown. Wears 7 as a flanker. Has ADHD and night terrors, and is afraid of water and blood.",
+  about:"Johnny’s best friend and the life of every room. He sleeps in Claire’s bed to keep the nightmares away and hides everything real behind a joke. He’s a gifted baker.",
+  job:"Tommen rugby flanker; hopes to take over his family’s bakery",love:"Claire Biggs",loveS:5,age:"17",
+  big:"Survived the 1995 boating accident that killed his father and baby sister. His stepbrother Mark abused him for years, which is the secret at the heart of Taming 7.",bigS:5,
+  later:"After the truth comes out he breaks down and stays with the Kavanaghs in Dublin. He comes home on New Year’s Eve, starts therapy, and begins rebuilding things with Claire.",laterS:5},
+ {id:"claire",name:"Claire Biggs",nick:"Sunshine",say:"CLAIR BIGZ",from:"Ballylaggin, Co. Cork",arc:"gc",role:"main",first:1,in:[1,2,4,5,6],
+  feat:"Blonde curls, huge smile, endlessly kind. Looks innocent, which people underestimate.",
+  about:"Shannon’s childhood best friend from primary school, Hugh’s little sister, and Gibsie’s safe place since they were seven.",
+  job:"Student at Tommen College",love:"Gibsie Gibson",loveS:5,age:"16",
+  big:"Finds Caoimhe’s note in Gibsie’s room, then blurts out the truth about Mark to defend him during a fight at the Winter Ball.",bigS:5,
+  later:"Gibsie feels betrayed and cuts contact, but they reconcile in their childhood treehouse and rebuild things on honesty.",laterS:5},
+ {id:"hugh",name:"Hugh “Hughie” Biggs",nick:"Hughie · 10",say:"HYOO “HYOO-ee” BIGZ",from:"Ballylaggin, Co. Cork",arc:"hl",role:"main",first:1,in:[1,2,5,6],
+  feat:"Steady, sensible and kind. Wears 10. The calm older brother of the group.",
+  about:"Claire’s big brother and Gibsie’s friend since childhood. As a boy he became the only person who could calm Lizzie Young.",
+  job:"Tommen rugby player and student",love:"Lizzie Young (first love); later Katie",loveS:6,age:"About 18",
+  big:"Was Lizzie’s boyfriend for years at Tommen, and the one who stayed through every hospital stay until a Halloween party broke them apart.",bigS:6,
+  later:"Moves on with Katie, but he and Lizzie both admit they still love each other. Their story continues in the next Hughie and Lizzie book.",laterS:6},
+ {id:"lizzie",name:"Lizzie Young",nick:"Elizabeth",say:"LIZ-ee YUNG",from:"England, moved to Ballylaggin in 1991",arc:"hl",role:"main",first:1,in:[1,2,5,6],
+  feat:"Sharp-tongued, guarded and fiercely protective of her girls. Can switch from hilarious to furious in a second.",
+  about:"One of Shannon and Claire’s best friends since primary school. She has a deep, unexplained hatred of Gibsie and the rugby boys.",
+  job:"Student at Tommen College",love:"Hugh Biggs",loveS:6,age:"16",
+  big:"Lives with early-onset bipolar disorder. Releasing 10 reveals she was abused by Mark Allen as a child, and that nobody believed her about her sister’s death.",bigS:6,
+  later:"Returns to Tommen in April 2004, stable on new medication, and lets Hugh go so she can focus on her recovery. In Taming 7 her anger at Gibsie drives much of the conflict.",laterS:6},
+ {id:"feely",name:"Patrick Feely",nick:"Feely",say:"PAT-rick FEE-lee",from:"Ballylaggin, Co. Cork",arc:null,role:"supporting",first:1,in:[1,2,5,6],
+  feat:"Quiet, observant and unflappable. The peacemaker of the friend group.",
+  about:"Part of the core Tommen crew with Johnny, Gibsie and Hugh. He often talks the others down.",
+  job:"Tommen rugby player",love:"Not revealed yet",loveS:0,age:"About 17",
+  big:"Always there in the background when things blow up.",bigS:0,
+  later:"Fans are hoping he gets his own book.",laterS:0},
+ {id:"darren",name:"Darren Lynch",nick:"",say:"DARR-en LINCH",from:"Ballylaggin, later Belfast",arc:"ja",role:"supporting",first:1,in:[1,2,3,4],
+  feat:"Rigid and rule-bound, desperate to do things properly.",
+  about:"The eldest Lynch sibling, who left home years earlier. Joey has never forgiven him for leaving.",
+  job:"Works in Belfast",love:"—",loveS:0,age:"Early 20s",
+  big:"Comes back from Belfast to act as guardian after Teddy’s attack.",bigS:2,
+  later:"Supports the Kavanaghs’ guardianship and pushes Joey into rehab.",laterS:4},
+ {id:"tadhg",name:"Tadhg Lynch",nick:"",say:"TYGE LINCH (rhymes with ‘tiger’ minus the r)",from:"Ballylaggin",arc:"js",role:"supporting",first:1,in:[1,2,3,4,5],
+  feat:"Angry, mouthy and fearless, a mini Joey in the making.",
+  about:"The eldest of Shannon’s three younger brothers.",
+  job:"Primary-school student",love:"—",loveS:0,age:"About 11",
+  big:"Holds a knife to Teddy to make him stop beating Joey.",bigS:4,
+  later:"Becomes calmer and less violent once he’s safe with the Kavanaghs.",laterS:2},
+ {id:"ollie",name:"Ollie Lynch",nick:"",say:"OL-ee LINCH",from:"Ballylaggin",arc:"js",role:"supporting",first:1,in:[1,2,3,4,5],
+  feat:"Sweet, anxious and clingy with Shannon.",about:"The middle of the three younger Lynch boys.",
+  job:"Primary-school student",love:"—",loveS:0,age:"About 8",big:"Gets out of the fire with his brothers.",bigS:2,later:"Lives with the Kavanaghs.",laterS:2},
+ {id:"sean",name:"Sean Lynch",nick:"",say:"SHAWN LINCH",from:"Ballylaggin",arc:"js",role:"supporting",first:1,in:[1,2,3,4,5],
+  feat:"The baby of the family; barely speaks at first.",about:"The youngest Lynch brother, mostly minded by Shannon and Joey.",
+  job:"Toddler",love:"—",loveS:0,age:"About 3",big:"Begins to talk once the family is safe.",bigS:2,later:"Lives with the Kavanaghs.",laterS:2},
+ {id:"marie",name:"Marie Lynch",nick:"",say:"muh-REE LINCH",from:"Ballylaggin",arc:"ja",role:"supporting",first:1,in:[1,2,3,4],
+  feat:"Worn down, chain-smoking, always trying to keep the peace.",about:"Shannon’s mother, who keeps choosing Teddy over her children’s safety.",
+  job:"Mother of six",love:"Teddy Lynch",loveS:1,age:"About 40",
+  big:"Loses a pregnancy at the end of Binding 13. Joey gives her an ultimatum: him or us.",bigS:1,
+  later:"Dies in the fire after helping get her youngest sons out.",laterS:2},
+ {id:"teddy",name:"Teddy Lynch",nick:"",say:"TED-ee LINCH",from:"Ballylaggin",arc:"ja",role:"antagonist",first:1,in:[1,2,3,4],
+  feat:"Big, drunk and terrifying. Once a promising hurler.",about:"The Lynch father, a violent alcoholic who has abused his wife and children for years.",
+  job:"Mostly unemployed; drinks",love:"Marie Lynch",loveS:1,age:"About 40s",
+  big:"Nearly kills Shannon in the family kitchen.",bigS:1,
+  later:"Released from treatment, he comes back, sets the family home on fire and dies in it.",laterS:2},
+ {id:"aj",name:"AJ Lynch",nick:"Anthony Joseph",say:"AY-JAY LINCH",from:"Ballylaggin",arc:"ja",role:"supporting",first:4,in:[4,5],
+  feat:"Brand-new baby; looks like his mam.",about:"Joey and Aoife’s son, named Anthony after Aoife’s dad Tony and Joseph after Joey.",
+  job:"Baby",love:"—",loveS:0,age:"Newborn (2005)",big:"Born at the end of Redeeming 6.",bigS:4,later:"Lives with Joey and Aoife in the annex at the Kavanaghs’.",laterS:4},
+ {id:"edel",name:"Edel Kavanagh",nick:"",say:"EE-del KAV-uh-nah",from:"Dublin & Ballylaggin",arc:"js",role:"supporting",first:1,in:[1,2,4,5],
+  feat:"Warm, glamorous and nosy in the best way.",about:"Johnny’s mother, who welcomes Shannon from the start.",
+  job:"Homemaker (wealthy family)",love:"John Kavanagh Sr.",loveS:1,age:"40s",
+  big:"Gives Shannon a mortifying sex talk in her kitchen.",bigS:2,
+  later:"With her husband, takes guardianship of all the Lynch children and builds Joey and Aoife their annex.",laterS:2},
+ {id:"johnsr",name:"John Kavanagh Sr.",nick:"",say:"JON KAV-uh-nah",from:"Dublin & Ballylaggin",arc:"js",role:"supporting",first:1,in:[1,2,4,5],
+  feat:"Calm, sharp and quietly formidable.",about:"Johnny’s father, a successful barrister and Johnny’s hero.",
+  job:"Barrister",love:"Edel Kavanagh",loveS:1,age:"40s",
+  big:"Uses his legal know-how to protect the Lynch kids and help Joey after the school brawl.",bigS:2,
+  later:"Becomes guardian to the Lynch children and later gives Gibsie and Sadhbh legal advice.",laterS:5},
+ {id:"peter",name:"Peter Biggs",nick:"",say:"PEE-ter BIGZ",from:"Ballylaggin",arc:"gc",role:"supporting",first:5,in:[5,6],
+  feat:"Gentle and quiet.",about:"Claire and Hugh’s father.",
+  job:"—",love:"Sinead Biggs",loveS:5,age:"40s",
+  big:"Pulled young Gibsie from the water in 1995.",bigS:5,
+  later:"Struggles with long depression and survivor’s guilt afterwards.",laterS:6},
+ {id:"sinead",name:"Sinead Biggs",nick:"",say:"shin-AYD BIGZ",from:"Ballylaggin",arc:"gc",role:"supporting",first:2,in:[2,5,6],
+  feat:"Kind, practical, unflappable.",about:"Claire and Hugh’s mother and a second mother to Gibsie.",
+  job:"Nurse",love:"Peter Biggs",loveS:5,age:"40s",big:"Holds the Biggs family together through Peter’s depression.",bigS:6,later:"Still Gibsie’s safe adult.",laterS:5},
+ {id:"sadhbh",name:"Sadhbh Allen",nick:"formerly Gibson",say:"SIVE (rhymes with five)",from:"Ballylaggin",arc:"gc",role:"supporting",first:2,in:[2,5,6],
+  feat:"Polished, image-conscious, grieving.",about:"Gibsie’s mother, widowed in 1995, later married to Keith Allen.",
+  job:"—",love:"Joe Gibson (late husband); Keith Allen",loveS:5,age:"40s",
+  big:"Learns what happened to her son under her own roof.",bigS:5,
+  later:"Stays with Gibsie in Dublin and starts separating from Keith.",laterS:5},
+ {id:"joe",name:"Joe Gibson",nick:"",say:"JOE GIB-sun",from:"Ballylaggin",arc:"gc",role:"supporting",first:5,in:[5,6],
+  feat:"Remembered as a loving dad.",about:"Gibsie’s father.",job:"—",love:"Sadhbh",loveS:5,age:"Died 1995",
+  big:"Drowned in 1995 trying to save his toddler daughter.",bigS:5,later:"His loss shapes Gibsie’s whole life.",laterS:5},
+ {id:"bethany",name:"Bethany Gibson",nick:"",say:"BETH-uh-nee GIB-sun",from:"Ballylaggin",arc:"gc",role:"supporting",first:5,in:[5,6],
+  feat:"A toddler.",about:"Gibsie’s little sister.",job:"—",love:"—",loveS:0,age:"Died 1995 as a toddler",
+  big:"Fell overboard during the 1995 boating accident and drowned.",bigS:5,later:"Gibsie carries enormous guilt over her death.",laterS:5},
+ {id:"keith",name:"Keith Allen",nick:"",say:"KEETH AL-en",from:"Ballylaggin",arc:"gc",role:"antagonist",first:5,in:[5,6],
+  feat:"Overbearing and dismissive of Gibsie.",about:"Gibsie’s stepfather and Mark’s father.",job:"—",love:"Sadhbh Allen",loveS:5,age:"40s–50s",
+  big:"Welcomes Mark home and refuses to see what his son did.",bigS:5,later:"Sadhbh and Gibsie begin separating from him.",laterS:5},
+ {id:"mark",name:"Mark Allen",nick:"",say:"MARK AL-en",from:"Ballylaggin, later abroad",arc:"gc",role:"antagonist",first:5,in:[5,6],
+  feat:"Older, controlling, outwardly charming.",about:"Keith’s son and Gibsie’s stepbrother, who once dated Caoimhe Young.",
+  job:"Works away; transfers home in 2005",love:"Caoimhe Young (dated)",loveS:5,age:"20s",
+  big:"Abused Gibsie as a child (Taming 7) and Lizzie (Releasing 10). Lizzie believes he’s responsible for Caoimhe’s death.",bigS:6,
+  later:"Flees the country to avoid prosecution after the truth comes out.",laterS:5},
+ {id:"caoimhe",name:"Caoimhe Young",nick:"",say:"KEE-vuh YUNG",from:"England, then Ballylaggin",arc:"hl",role:"supporting",first:5,in:[5,6],
+  feat:"Lizzie’s older sister.",about:"Dated Mark Allen as a teenager.",job:"Student",love:"Mark Allen",loveS:5,age:"Teenager (died 2000)",
+  big:"Found dead in the river under the Ballylaggin footbridge in April 2000. It was ruled suicide, and she left a note.",bigS:5,
+  later:"Her note proves she knew what Mark had done to Gibsie.",laterS:5},
+ {id:"mike",name:"Mike Young",nick:"",say:"MIKE YUNG",from:"England, then Ballylaggin",arc:"hl",role:"supporting",first:6,in:[6],
+  feat:"Worried, out of his depth.",about:"Lizzie and Caoimhe’s father.",job:"—",love:"Catherine Young",loveS:6,age:"40s",big:"Moves the family to Cork in 1991.",bigS:6,later:"Loses his elder daughter in 2000.",laterS:6},
+ {id:"catherine",name:"Catherine Young",nick:"",say:"KATH-rin YUNG",from:"England, then Ballylaggin",arc:"hl",role:"supporting",first:5,in:[5,6],
+  feat:"Fragile but loving.",about:"Lizzie and Caoimhe’s mother, a multiple-time cancer survivor.",job:"—",love:"Mike Young",loveS:6,age:"40s",
+  big:"Was in Texas for cancer treatment when Caoimhe died.",bigS:6,later:"Claire confides in her about Lizzie in Taming 7.",laterS:5},
+ {id:"tony",name:"Tony Molloy",nick:"",say:"TOH-nee muh-LOY",from:"Ballylaggin",arc:"ja",role:"supporting",first:3,in:[3,4],
+  feat:"Big-hearted, gruff, oil-stained.",about:"Aoife’s dad, who owns the garage where Joey works and becomes the father Joey never had.",
+  job:"Garage owner / mechanic",love:"Trish Molloy",loveS:3,age:"40s",big:"Gives Joey a job and a lifeline.",bigS:3,later:"Grandad to AJ, who is named after him.",laterS:4},
+ {id:"trish",name:"Trish Molloy",nick:"",say:"TRISH muh-LOY",from:"Ballylaggin",arc:"ja",role:"supporting",first:3,in:[3,4],
+  feat:"Protective and blunt.",about:"Aoife’s mam, who worries about her daughter and Joey.",job:"—",love:"Tony Molloy",loveS:3,age:"40s",big:"Stands by Aoife through the pregnancy.",bigS:4,later:"Granny to AJ.",laterS:4},
+ {id:"kevin",name:"Kevin Molloy",nick:"Kev",say:"KEV-in muh-LOY",from:"Ballylaggin",arc:"ja",role:"supporting",first:3,in:[3,4],
+  feat:"Clever, resentful, competitive.",about:"Aoife’s twin brother, jealous of Joey’s bond with their dad.",
+  job:"Student",love:"—",loveS:0,age:"18",big:"Tells Tony about Aoife’s pregnancy before she’s ready.",bigS:4,later:"Tries to make amends and helps Aoife study for her exams.",laterS:4},
+ {id:"casey",name:"Casey",nick:"",say:"KAY-see",from:"Ballylaggin",arc:"ja",role:"supporting",first:3,in:[3,4],
+  feat:"Brutally honest.",about:"Aoife’s best friend at BCS.",job:"Student",love:"—",loveS:0,age:"18",big:"Tells Aoife some hard truths about juggling Joey and Paul.",bigS:3,later:"Still Aoife’s ride-or-die.",laterS:4},
+ {id:"paul",name:"Paul",nick:"",say:"PAWL",from:"Ballylaggin",arc:"ja",role:"supporting",first:3,in:[3],
+  feat:"Comes from a pretentious family.",about:"Aoife’s boyfriend for part of Saving 6, much to Joey’s disgust.",job:"Student",love:"Aoife (for a while)",loveS:3,age:"Teen",big:"Gets beaten up by Joey for how he treats Aoife.",bigS:3,later:"Out of the picture.",laterS:3},
+ {id:"katie",name:"Katie",nick:"",say:"KAY-tee",from:"Ballylaggin",arc:"hl",role:"supporting",first:5,in:[5,6],
+  feat:"Musical and sweet.",about:"A music scholarship student at Tommen.",job:"Student",love:"Hugh Biggs",loveS:6,age:"Teen",big:"Is seeing Hugh when Lizzie comes back to school.",bigS:6,later:"Still with Hugh during Taming 7.",laterS:5},
+ {id:"bella",name:"Bella Wilkinson",nick:"",say:"BELL-uh WILL-kin-sun",from:"Ballylaggin",arc:"js",role:"antagonist",first:1,in:[1,2],
+  feat:"Popular, glamorous, vicious.",about:"A sixth-year who had a casual thing with Johnny and targets Shannon out of jealousy.",
+  job:"Student at Tommen",love:"Johnny (former fling)",loveS:1,age:"17–18",big:"Corners and attacks Shannon in the girls’ bathroom.",bigS:2,later:"Sets off the car-park brawl that gets Joey expelled.",laterS:2},
+ {id:"ronan",name:"Ronan McGarry",nick:"",say:"ROH-nan mick-GA-ree",from:"Ballylaggin",arc:"js",role:"antagonist",first:1,in:[1,2],
+  feat:"Smug and entitled.",about:"A Tommen rugby teammate who harasses Shannon.",job:"Tommen rugby player",love:"—",loveS:0,age:"Teen",big:"Gets put firmly in his place by Johnny.",bigS:1,later:"—",laterS:1},
+ {id:"cormac",name:"Cormac Ryan",nick:"",say:"KOR-mak RY-an",from:"Ballylaggin",arc:"js",role:"antagonist",first:1,in:[1,2],
+  feat:"Mean-spirited.",about:"Tommen student linked to Bella and an old bully of Shannon’s.",job:"Tommen rugby player",love:"Bella (hook-ups)",loveS:1,age:"Teen",big:"Caught up in the car-park brawl with Johnny and Joey.",bigS:2,later:"—",laterS:2},
+ {id:"pierce",name:"Pierce O’Neill",nick:"",say:"PEERSS oh-NEEL",from:"Ballylaggin",arc:"hl",role:"antagonist",first:6,in:[6],
+  feat:"Opportunistic.",about:"A teammate of Hugh’s at Tommen.",job:"Tommen rugby player",love:"—",loveS:0,age:"Teen",
+  big:"Takes advantage of Lizzie during a manic episode at a Halloween party in 2003, ending her relationship with Hugh.",bigS:6,later:"—",laterS:6}
+];
+const CH=Object.fromEntries(CHARS.map(c=>[c.id,c]));
+
+/* Connections: [a,b,type,label,note,spoilerLevel] */
+const EDGES=[
+ ["shannon","johnny","rom","Couple","They meet when his rugby ball knocks her out on her first day at Tommen.",1],
+ ["joey","aoife","rom","Couple","Best friends since BCS who fall in love. Their book titles carry Joey’s hurling number.",1],
+ ["gibsie","claire","rom","Couple","Childhood best friends. He sleeps in her bed to keep his night terrors away.",5],
+ ["hugh","lizzie","rom","First love","He was the only one who could calm her as a child. They dated for years at Tommen.",6],
+ ["hugh","katie","rom","Dating","Hugh is seeing Katie when Lizzie returns in 2004.",6],
+ ["teddy","marie","rom","Married","Marie keeps choosing Teddy over her children’s safety.",1],
+ ["johnsr","edel","rom","Married","Johnny’s parents and later guardians to the Lynch children.",1],
+ ["peter","sinead","rom","Married","Claire and Hugh’s parents.",5],
+ ["tony","trish","rom","Married","Aoife and Kevin’s parents.",3],
+ ["mike","catherine","rom","Married","Lizzie and Caoimhe’s parents.",6],
+ ["sadhbh","keith","rom","Married","Sadhbh marries Keith after losing her husband in 1995.",5],
+ ["sadhbh","joe","rom","Married (late)","Gibsie’s parents. Joe drowned in 1995.",5],
+ ["mark","caoimhe","rom","Dated","Caoimhe was Mark’s girlfriend before she died.",5],
+ ["aoife","paul","rom","Ex","Aoife dates Paul for part of Saving 6.",3],
+ ["johnny","bella","rom","Ex-fling","A casual thing before Shannon. Bella doesn’t let it go.",1],
+ ["teddy","shannon","fam","Father · daughter","Teddy abuses his children; Shannon bears the worst of it once Joey can fight back.",1],
+ ["teddy","joey","fam","Father · son","Joey takes the beatings to protect the others.",1],
+ ["marie","shannon","fam","Mother · daughter","",1],["marie","joey","fam","Mother · son","",1],
+ ["teddy","darren","fam","Father · son","",1],["teddy","tadhg","fam","Father · son","",1],["teddy","ollie","fam","Father · son","",1],["teddy","sean","fam","Father · son","",1],
+ ["shannon","joey","fam","Siblings","Joey is Shannon’s protector, and her fiercest defender.",1],
+ ["shannon","darren","fam","Siblings","Darren left home; he comes back as guardian.",1],
+ ["shannon","tadhg","fam","Siblings","",1],["shannon","ollie","fam","Siblings","",1],["shannon","sean","fam","Siblings","",1],
+ ["joey","darren","fam","Brothers","Joey resents Darren for leaving him to cope alone.",2],
+ ["joey","aj","fam","Father · son","Joey becomes a dad after rehab.",4],
+ ["aoife","aj","fam","Mother · son","",4],
+ ["tony","aoife","fam","Father · daughter","",3],["trish","aoife","fam","Mother · daughter","",3],
+ ["aoife","kevin","fam","Twins","Kevin resents Joey’s place in the family.",3],
+ ["tony","kevin","fam","Father · son","",3],
+ ["edel","johnny","fam","Mother · son","",1],["johnsr","johnny","fam","Father · son","Johnny’s hero.",1],
+ ["claire","hugh","fam","Siblings","",1],
+ ["peter","claire","fam","Father · daughter","",5],["sinead","hugh","fam","Mother · son","",5],
+ ["sadhbh","gibsie","fam","Mother · son","",2],["joe","gibsie","fam","Father · son","",5],
+ ["gibsie","bethany","fam","Siblings","Bethany drowned in 1995.",5],
+ ["keith","mark","fam","Father · son","",5],
+ ["gibsie","mark","fam","Stepbrothers","",5],
+ ["lizzie","caoimhe","fam","Sisters","Lizzie never accepted that her sister’s death was suicide.",5],
+ ["mike","lizzie","fam","Father · daughter","",6],["catherine","lizzie","fam","Mother · daughter","",5],
+ ["edel","shannon","fam","Guardian","The Kavanaghs take guardianship of all the Lynch children.",2],
+ ["johnsr","joey","fam","Guardian","John Sr. uses his legal know-how to protect Joey.",2],
+ ["johnny","gibsie","fri","Best friends","Teammates and brothers in all but blood. Johnny finds Gibsie at his lowest.",1],
+ ["johnny","hugh","fri","Teammates","Part of the Tommen core crew.",1],
+ ["johnny","feely","fri","Teammates","",1],
+ ["gibsie","hugh","fri","Childhood friends","Grew up together; Hugh is Claire’s brother.",1],
+ ["gibsie","feely","fri","Friends","",1],
+ ["shannon","claire","fri","Best friends","Friends since primary school; Claire is the first to welcome her at Tommen.",1],
+ ["shannon","lizzie","fri","Best friends","Lizzie fights Shannon’s battles, sometimes literally.",1],
+ ["claire","lizzie","fri","Best friends","Childhood best friends, strained badly in Taming 7.",1],
+ ["joey","tony","fri","Boss & father figure","Tony gives Joey a job and the fathering he never had.",3],
+ ["aoife","casey","fri","Best friends","",3],
+ ["joey","lizzie","fri","Friends","A quiet bond over shared trauma, though she never fully confides in him.",6],
+ ["sinead","gibsie","fri","Second mother","Sinead mothers Gibsie as one of her own.",5],
+ ["peter","gibsie","fri","Rescuer","Peter pulled Gibsie from the water in 1995.",5],
+ ["aoife","shannon","fri","Future sister-in-law","Aoife has always looked out for Joey’s little sister.",1],
+ ["claire","catherine","fri","Confidante","Claire tells Catherine she’s worried about Lizzie.",5],
+ ["lizzie","gibsie","feud","Bitter rift","Lizzie blames Gibsie for not backing her up about Mark, and for Caoimhe’s death.",5],
+ ["joey","kevin","feud","Rivals","Kevin resents Joey’s closeness with Tony and hates him dating Aoife.",3],
+ ["joey","paul","feud","Rivals","Joey beats up Paul over how he treats Aoife.",3],
+ ["bella","shannon","feud","Rivals","Bella targets Shannon out of jealousy over Johnny.",1],
+ ["ronan","shannon","feud","Harasser","Ronan harasses Shannon until Johnny steps in.",1],
+ ["johnny","ronan","feud","Clash","",1],
+ ["cormac","bella","rom","Hook-ups","Cormac and Bella are an on-off thing at Tommen.",1],
+ ["cormac","shannon","feud","Old bully","One of the boys who made Shannon’s life miserable.",1],
+ ["johnny","cormac","feud","Brawl","Johnny, Joey and Cormac end up in the car-park fight.",2],
+ ["johnny","teddy","feud","Enemies","Johnny calls the authorities on Teddy.",2],
+ ["hugh","mark","feud","Enemies","Hugh confronts Mark and warns him away from Claire.",5],
+ ["claire","gibsie","feud","Betrayal","Claire reveals Gibsie’s secret without his consent.",5],
+ ["joey","teddy","harm","Abuser","Years of beatings. Teddy says Joey is just like him.",1],
+ ["teddy","shannon","harm","Abuser","Nearly kills Shannon in the kitchen.",1],
+ ["mark","gibsie","harm","Abuser","Mark abused Gibsie from about age 7 to 11.",5],
+ ["mark","lizzie","harm","Abuser","Mark abused Lizzie as a young child, and no one believed her.",6],
+ ["pierce","lizzie","harm","Took advantage","During a manic episode at Halloween 2003.",6]
+];
+const ETYPES={fam:{name:"Family",c:"var(--fam)",hex:"#6fc3a0"},rom:{name:"Romance",c:"var(--rom)",hex:"#ef6f8f"},fri:{name:"Friendship",c:"var(--fri)",hex:"#5aa2d6"},feud:{name:"Feud",c:"var(--feud)",hex:"#e0863f"},harm:{name:"Danger / harm",c:"var(--harm)",hex:"#c94b4b"}};
+
+/* Family trees as nested units. A unit is {p:[ids], s:spoiler for partnership, kids:[units]}; dead flagged by id list */
+const DEAD={marie:2,teddy:2,joe:5,bethany:5,caoimhe:5};
+const FAMILIES=[
+ {name:"The Lynches",c:"var(--ja)",note:"Guardianship passes to the Kavanaghs after the fire.",root:{p:["teddy","marie"],kids:[{p:["darren"]},{p:["joey","aoife"],s:1,kids:[{p:["aj"],s:4}]},{p:["shannon","johnny"],s:1},{p:["tadhg"]},{p:["ollie"]},{p:["sean"]}]}},
+ {name:"The Kavanaghs",c:"var(--js)",note:"Johnny is an only child. The Kavanaghs become guardians to all the Lynch children.",root:{p:["johnsr","edel"],kids:[{p:["johnny","shannon"],s:1}]}},
+ {name:"The Molloys",c:"var(--ja)",note:"Aoife and Kevin are twins.",root:{p:["tony","trish"],kids:[{p:["aoife","joey"],s:1,kids:[{p:["aj"],s:4}]},{p:["kevin"]}]}},
+ {name:"The Biggses",c:"var(--gc)",note:"Gibsie is practically a third child in this house.",root:{p:["peter","sinead"],kids:[{p:["hugh","lizzie"],s:6},{p:["claire","gibsie"],s:5}]}},
+ {name:"The Gibsons & Allens",c:"var(--gc)",note:"Sadhbh remarries Keith Allen after 1995, making Mark Gibsie’s stepbrother.",root:{p:["joe","sadhbh"],s:5,kids:[{p:["gibsie","claire"],s:5},{p:["bethany"]}]},extra:{p:["keith","sadhbh"],s:5,kids:[{p:["mark","caoimhe"],s:5,label:"Keith’s son"}]}},
+ {name:"The Youngs",c:"var(--hl)",note:"Moved from England to Cork in 1991.",root:{p:["mike","catherine"],s:5,kids:[{p:["caoimhe","mark"],s:5},{p:["lizzie","hugh"],s:6}]}}
+];
+// explicit relations for focus panel
+const REL={parents:{},partners:{},};
+function addPar(child,parents,s){(REL.parents[child]=REL.parents[child]||[]).push(...parents.map(p=>({id:p,s})));}
+function addPartner(a,b,s){(REL.partners[a]=REL.partners[a]||[]).push({id:b,s});(REL.partners[b]=REL.partners[b]||[]).push({id:a,s});}
+[["teddy","marie",["darren","joey","shannon","tadhg","ollie","sean"],1],["johnsr","edel",["johnny"],1],["tony","trish",["aoife","kevin"],3],["peter","sinead",["hugh","claire"],5],["joe","sadhbh",["gibsie","bethany"],5],["mike","catherine",["caoimhe","lizzie"],5],["joey","aoife",["aj"],4]].forEach(([a,b,kids,s])=>kids.forEach(k=>addPar(k,[a,b],k==="aj"?4:s)));
+addPar("mark",["keith"],5);
+[["teddy","marie",1],["johnsr","edel",1],["tony","trish",3],["peter","sinead",5],["joe","sadhbh",5],["keith","sadhbh",5],["mike","catherine",6],["joey","aoife",1],["shannon","johnny",1],["gibsie","claire",5],["hugh","lizzie",6],["hugh","katie",6],["mark","caoimhe",5]].forEach(([a,b,s])=>addPartner(a,b,s));
+const STEP={gibsie:[{id:"keith",r:"Stepfather",s:5},{id:"mark",r:"Stepbrother",s:5}],mark:[{id:"sadhbh",r:"Stepmother",s:5},{id:"gibsie",r:"Stepbrother",s:5}],keith:[{id:"gibsie",r:"Stepson",s:5}],sadhbh:[{id:"mark",r:"Stepson",s:5}],
+  shannon:[{id:"edel",r:"Guardian",s:2},{id:"johnsr",r:"Guardian",s:2}],joey:[{id:"edel",r:"Guardian",s:2},{id:"johnsr",r:"Guardian",s:2}],tadhg:[{id:"edel",r:"Guardian",s:2}],ollie:[{id:"edel",r:"Guardian",s:2}],sean:[{id:"edel",r:"Guardian",s:2}]};
+
+const TIMELINE=[
+ {when:"1991",t:"The Youngs move from England to Cork",d:"Mike and Catherine Young bring their daughters to Ballylaggin, worried about little Lizzie’s outbursts and her refusal to speak. She’s diagnosed with selective mutism.",b:6,arc:"hl",place:"Ballylaggin"},
+ {when:"Early 1990s",t:"Mark Allen’s abuse begins",d:"The older boy from a nearby family begins abusing Lizzie, telling her it will ‘fix’ her. Her doctors put her memories down to her illness.",b:6,arc:"hl",place:"Ballylaggin"},
+ {when:"1994",t:"Lizzie meets Hugh, Claire and Gibsie",d:"At Sacred Heart Primary, Lizzie forms an instant, intense bond with Hugh Biggs, the one person who can calm her.",b:6,arc:"hl",place:"Sacred Heart Primary"},
+ {when:"May 1995",t:"The boating accident",d:"At a First Holy Communion celebration on a boat, toddler Bethany Gibson falls overboard. Her father Joe drowns trying to save her, and Peter Biggs pulls seven-year-old Gibsie from the water.",b:5,arc:"gc",place:"Off the Cork coast"},
+ {when:"After 1995",t:"Gibsie moves in with Keith and Mark",d:"Sadhbh marries Keith Allen. Gibsie is terrified of his new stepbrother Mark, who abuses him from roughly age 7 to 11.",b:5,arc:"gc",place:"Gibson/Allen house"},
+ {when:"1996–1999",t:"Lizzie’s hospital years",d:"Lizzie is formally diagnosed with early-onset bipolar disorder and is hospitalised several times. Hugh stays her anchor.",b:6,arc:"hl",place:"Ballylaggin"},
+ {when:"February 2000",t:"Saving 6 begins",d:"Joey Lynch starts at BCS, works at Tony Molloy’s garage and meets Aoife Molloy, who refuses to be scared off.",b:3,arc:"ja",place:"BCS"},
+ {when:"April 2000",t:"Caoimhe Young dies",d:"With their parents in Texas for Catherine’s cancer treatment, Caoimhe confronts Mark and is later found dead in the river under the Ballylaggin footbridge. It’s ruled suicide.",b:5,arc:"hl",place:"The footbridge"},
+ {when:"April 2000",t:"The funeral",d:"Lizzie says Mark killed her sister. Nobody believes her, Gibsie doesn’t back her up, and the friend group fractures.",b:6,arc:"hl",place:"Ballylaggin"},
+ {when:"2000–2004",t:"Joey and Aoife, year by year",d:"From rivals to best friends to more, while Joey takes his father’s beatings, Darren leaves home and the drugs creep in.",b:3,arc:"ja",place:"BCS"},
+ {when:"2001–2003",t:"Hugh and Lizzie at Tommen",d:"They become a couple. Lizzie stops taking her medication and her mental health declines.",b:6,arc:"hl",place:"Tommen College"},
+ {when:"Halloween 2003",t:"The party that ends it",d:"During a manic episode, Lizzie is with Pierce O’Neill. Hugh ends the relationship, and Lizzie makes a severe suicide attempt and is admitted to Brickley House.",b:6,arc:"hl",place:"Brickley House"},
+ {when:"April 2004",t:"Lizzie comes back",d:"Stable on new medication, Lizzie apologises to Hugh in the courtyard. He’s seeing Katie. They admit they still love each other, but she walks away to focus on recovery.",b:6,arc:"hl",place:"Tommen College"},
+ {when:"September 2004",t:"Sixth year at BCS",d:"Joey and Aoife start their final year. Aoife turns 18 on 18 September.",b:3,arc:"ja",place:"BCS"},
+ {when:"December 2004",t:"Johnny’s first surgery",d:"Johnny has surgery for a torn adductor, which doesn’t properly heal. He keeps playing through it.",b:1,arc:"js",place:"Dublin"},
+ {when:"Winter 2004–05",t:"Joey’s overdose",d:"Aoife finds Joey close to a heroin overdose and saves him. He breaks up with her, convinced he isn’t good enough.",b:3,arc:"ja",place:"Ballylaggin"},
+ {when:"January 2005",t:"Shannon starts at Tommen",d:"On her first day Johnny’s rugby ball knocks her out on the pitch.",b:1,arc:"js",place:"Tommen College"},
+ {when:"Spring 2005",t:"Sixteen",d:"Johnny throws Shannon a sixteenth birthday party. Teddy sees a newspaper photo of them together and attacks her.",b:1,arc:"js",place:"Kavanagh house"},
+ {when:"Spring 2005",t:"Royce College match",d:"An opponent’s studs reopen Johnny’s surgical site. He collapses and is rushed to surgery in Dublin. On morphine he tells everyone he loves Shannon.",b:1,arc:"js",place:"Dublin"},
+ {when:"Spring 2005",t:"“Him or us?”",d:"Marie has miscarried and Teddy attacks Shannon. Joey fights back and gives their mother an ultimatum: him or us.",b:1,arc:"js",place:"Lynch house"},
+ {when:"Spring 2005",t:"Johnny calls it in",d:"Shannon is hospitalised with a collapsed lung. Johnny reports Teddy to the authorities, and Darren comes home from Belfast.",b:2,arc:"js",place:"Belfast"},
+ {when:"Spring 2005",t:"A baby on the way",d:"Aoife discovers she’s pregnant and decides to keep the baby.",b:4,arc:"ja",place:"Ballylaggin"},
+ {when:"Spring 2005",t:"The car-park brawl",d:"Bella attacks Shannon at Tommen. The fight that follows gets Joey arrested and expelled.",b:2,arc:"js",place:"Tommen College"},
+ {when:"Late spring 2005",t:"The fire",d:"Teddy returns, douses the house and sets it alight. Johnny gets the younger boys out with Marie’s help. Marie and Teddy both die.",b:2,arc:"js",place:"Lynch house"},
+ {when:"2005",t:"Guardianship & rehab",d:"The Kavanaghs get emergency custody of the Lynch children. After the funeral, Joey signs himself into rehab.",b:4,arc:"ja",place:"Kavanagh house"},
+ {when:"Summer 2005",t:"Johnny plays for Ireland",d:"Johnny’s rugby career explodes on the international stage.",b:2,arc:"js",place:"Dublin"},
+ {when:"Summer 2005",t:"Mark comes home",d:"Mark Allen transfers home for work after six years away, and Hugh warns him to stay away from Claire.",b:5,arc:"gc",place:"Gibson/Allen house"},
+ {when:"September 2005",t:"Final year",d:"Johnny turns down a pro contract to stay at Tommen. Joey leaves rehab, AJ is born, and Joey starts at Tommen.",b:4,arc:"ja",place:"Tommen College"},
+ {when:"Autumn 2005",t:"The kiss on the pitch",d:"Gibsie and Claire finally admit their feelings after an impulsive kiss on the rugby field.",b:5,arc:"gc",place:"Tommen College"},
+ {when:"December 2005",t:"The Winter Ball",d:"Defending Gibsie from Lizzie, Claire reveals that Mark raped him. Gibsie breaks down, Johnny finds him, and Mark flees the country.",b:5,arc:"gc",place:"Tommen College"},
+ {when:"New Year’s Eve 2005",t:"The treehouse",d:"Gibsie comes home, starts therapy, and reconciles with Claire in their childhood treehouse.",b:5,arc:"gc",place:"Biggs house"},
+ {when:"2025–2026",t:"What’s next",d:"Chloe Walsh confirms more books are coming (title TBA), and a Prime Video adaptation of the first two books is announced.",b:0,arc:null,place:"Real world"}
+];
+
+const PLACES=[
+ {id:"bally",name:"Ballylaggin",kind:"Fictional town · Co. Cork",d:"The small Cork town where everyone knows your business. Posh Tommen kids and council-estate kids share the same streets, pubs and gossip.",b:1,ll:[52.08,-8.62],xy:[300,215],real:false},
+ {id:"tommen",name:"Tommen College",kind:"Private school",d:"A fee-paying rugby school with a pitch where Shannon is knocked out on day one. Home to the Winter Ball, the sixth-year common room and endless drama.",b:1,xy:[420,120]},
+ {id:"bcs",name:"Ballylaggin Community School (BCS)",kind:"Public school",d:"Joey and Aoife’s school, and where Shannon was relentlessly bullied before transferring.",b:1,xy:[170,140]},
+ {id:"sacred",name:"Sacred Heart Primary",kind:"Primary school",d:"Where Lizzie, Hugh, Claire, Gibsie and Shannon were all small together.",b:6,xy:[230,300]},
+ {id:"lynch",name:"The Lynch house",kind:"Home · council estate",d:"A cramped, frightening house on the estate. The kitchen is where Binding 13 ends, and the house is lost in Keeping 13.",b:1,xy:[110,250]},
+ {id:"kav",name:"The Kavanagh house",kind:"Home",d:"Johnny’s big house in Ballylaggin, where Shannon’s birthday party happens and where the Lynch kids find safety. Later home to Joey, Aoife and AJ’s annex.",b:1,xy:[500,230]},
+ {id:"biggs",name:"The Biggs house",kind:"Home",d:"Sinead’s kitchen, Claire’s bedroom where Gibsie sleeps, and the treehouse where Gibsie and Claire grew up.",b:1,xy:[390,320]},
+ {id:"gibs",name:"The Gibson/Allen house",kind:"Home",d:"Where Gibsie lives with Sadhbh, Keith and, eventually, Mark again. Near the Youngs.",b:5,xy:[450,370]},
+ {id:"young",name:"The Young house",kind:"Home",d:"Lizzie’s family home after the move from England.",b:5,xy:[530,330]},
+ {id:"garage",name:"Tony Molloy’s garage",kind:"Workplace",d:"Where Joey works as a mechanic, and where Tony becomes the father figure Joey never had.",b:3,xy:[80,90]},
+ {id:"bridge",name:"The footbridge",kind:"River crossing",d:"The footbridge over the river where Caoimhe Young was found in April 2000.",b:5,xy:[300,60]},
+ {id:"brickley",name:"Brickley House",kind:"Treatment centre",d:"Where Lizzie is admitted for intensive treatment after Halloween 2003.",b:6},
+ {id:"cork",name:"Cork City",kind:"Real city",d:"The nearest city to Ballylaggin, for hospitals, nights out and Joey’s worst habits.",b:1,ll:[51.8985,-8.4756]},
+ {id:"dublin",name:"Dublin",kind:"Real city",d:"Johnny’s original home and where he has surgery. Gibsie and Sadhbh stay at the Kavanaghs’ Dublin house after the Winter Ball.",b:1,ll:[53.3498,-6.2603]},
+ {id:"belfast",name:"Belfast",kind:"Real city",d:"Where Darren Lynch has been living since he left home.",b:2,ll:[54.5973,-5.9301]},
+ {id:"royce",name:"Royce College",kind:"Rival school",d:"The playoff opponent whose boot reopens Johnny’s injury.",b:1},
+ {id:"england",name:"England & Texas",kind:"Away",d:"The Youngs came from England in 1991. Catherine was in Texas for cancer treatment when Caoimhe died.",b:6}
+];
+
+const RECAPS={
+ b13:{start:"January 2005. Shannon Lynch, 15 and bullied for years at BCS, transfers to Tommen College hoping nobody will notice her. Within minutes of arriving, a ball kicked by rugby captain Johnny Kavanagh knocks her out cold.",
+  what:["Johnny can’t shake his guilt, or his interest. He reads her school file and realises how much she’s been through.","He’s hiding a torn adductor from a December surgery that hasn’t healed, because the Academy scouts are watching.","Johnny shields Shannon from Ronan McGarry and from Bella Wilkinson, the sixth-year he used to hook up with.","Shannon’s friends Claire and Lizzie, and Johnny’s crew Gibsie, Hughie and Feely, pull the two of them together.","A cinema date, dinner and a sixteenth birthday party at Johnny’s house. Shannon admits she loves him.","Her father Teddy finds a newspaper photo of them together and assaults her, drowning her phone.","Against Royce College, Johnny’s injury tears open. He collapses and is rushed to surgery in Dublin. On morphine he tells everyone he loves Shannon.","Shannon stays overnight and finally tells him that her father is the one who hurts her."],
+  end:"Shannon goes home to find her mother has miscarried and Teddy in a drunken rage. He attacks her. Joey fights their father off and gives Marie an ultimatum: him or us. The siblings get ready to leave, and the book ends before Marie answers.",
+  rem:["Johnny is in Dublin after surgery and half-remembers what Shannon told him about her father.","Joey (18) is the one protecting the younger boys: Tadhg, Ollie and Sean.","Shannon and Johnny have said I love you, but aren’t officially together.","Darren, the eldest brother, has been gone for years."]},
+ k13:{start:"Straight after Binding 13. Shannon is in hospital with a collapsed lung and a concussion after Teddy’s attack, and Joey has been beaten too. Johnny, recovering from surgery in Dublin, gets the truth out of Claire.",
+  what:["Johnny calls the emergency services and reports Teddy, breaking years of family silence.","Darren comes back from Belfast to act as guardian, with strict rules and hard conversations.","Joey sinks deeper into drugs while trying to keep everyone safe.","Shannon and Johnny get closer and try to keep it quiet from Edel (it doesn’t work).","Teddy is released from a treatment centre and comes back to Ballylaggin.","Bella attacks Shannon in the girls’ bathroom. The car-park fight that follows gets Joey arrested and expelled, and John Sr. steps in legally."],
+  end:"Teddy breaks in and sets the house on fire. Shannon escapes through a window to Johnny, who goes back inside for the boys. Marie helps get them out but doesn’t make it, and Teddy dies too. The Kavanaghs get guardianship of all the Lynch children. Joey goes to rehab, Johnny plays for Ireland, and in September he turns down a pro contract to finish at Tommen with Shannon.",
+  rem:["Saving 6 jumps back to 2000, so Shannon is a little girl again.","You already know where Joey ends up; the next two books show how he got there.","Aoife has been around the whole time. Watch for her.","Johnny carries guilt that he couldn’t save Marie."]},
+ s6:{start:"February 2000. Joey Lynch is the hurling star of BCS, works at Tony Molloy’s garage and takes his father’s beatings so the younger kids don’t have to. Aoife Molloy, his boss’s daughter, won’t be pushed away.",
+  what:["Five school years, told chapter by dated chapter, from February 2000 to winter 2004.","Joey beats up Aoife’s boyfriend Paul for how he treats her, and they bounce between rivals and best friends.","Aoife’s twin Kevin resents Joey’s closeness with their dad.","Darren leaves home and Joey becomes the man of the house in all the worst ways.","Weed turns into harder drugs as Joey tries to numb everything.","Friendship becomes love, and Aoife turns 18 in September 2004."],
+  end:"Aoife finds Joey close to a heroin overdose and saves his life. Afterwards he breaks up with her, convinced he’ll only drag her down until he sorts himself out.",
+  rem:["Joey and Aoife are broken up but still in love.","Redeeming 6 overlaps with Binding 13 and Keeping 13, so you’ll see familiar scenes from Joey’s side.","Remember how Joey feels about turning into his father."]},
+ r6:{start:"A few days after Saving 6. Joey and Aoife are split up and both wrecked. Joey is trying, and failing, to stay clean.",
+  what:["At a Tommen party Joey asks Lizzie to look out for Shannon at her new school. Aoife watches Claire and Gibsie dance.","Aoife finds out she’s pregnant and decides to keep the baby.","Kevin tells their parents before Aoife is ready, splitting the twins apart.","Teddy beats Joey again, and Tadhg holds a knife to his father to stop it.","The events of Binding 13 and Keeping 13 happen around them, including the attack, the arrest and the fire, now seen from Joey’s side.","Joey is arrested, then signs himself into rehab, funded by the Kavanaghs, after his parents’ funeral."],
+  end:"Joey gets out of rehab clean on the condition he finishes school at Tommen. Aoife gives birth to Anthony Joseph, AJ. She gives Joey one last chance, and he promises her the happy ending, with an annex at the Kavanaghs’ for the three of them.",
+  rem:["Joey is a dad, sober and now a Tommen student.","Taming 7 runs in the same final school year.","The Lynch kids all live with the Kavanaghs now."]},
+ t7:{start:"A May 1995 prologue: at a First Holy Communion boat trip, Gibsie’s father and baby sister drown, and Claire’s dad saves him. Then it jumps ten years to the summer before final year at Tommen.",
+  what:["Gibsie is the class clown with ADHD and night terrors, and he still sleeps in Claire’s bed when he can’t cope.","His stepbrother Mark comes home after six years. Hugh confronts him and warns him off Claire.","Gibsie and Claire kiss on the rugby pitch and finally admit their feelings.","Lizzie blames Gibsie for Mark and for her sister Caoimhe’s death, and the friend group splits.","Claire briefly dates Jamie Kelleher. Gibsie’s mental health slides.","Claire finds Caoimhe’s note in Gibsie’s room: Mark didn’t hurt Caoimhe, he hurt Gibsie, and Caoimhe knew."],
+  end:"At the Winter Ball, Claire defends Gibsie against Lizzie by revealing that Mark raped him. Gibsie feels exposed and betrayed, breaks down and is found by Johnny. He and Sadhbh go to the Kavanaghs’ in Dublin, and Mark flees the country. On New Year’s Eve Gibsie comes home, starts therapy and reconciles with Claire in their treehouse.",
+  rem:["Mark has fled and the family is separating from Keith.","Lizzie’s anger gets fuller context in the next book.","Read Releasing 10 next. It’s a prequel, but it’s written to be read after this."]},
+ r10:{start:"1991. The Youngs move from England to Cork with little Lizzie, who won’t speak and has violent outbursts. She’s diagnosed with selective mutism and, later, early-onset bipolar disorder.",
+  what:["Mark Allen, from a nearby family, abuses Lizzie from a very young age. When she tells, it’s put down to her illness.","At Sacred Heart Primary in 1994 she meets Hugh, Claire and Gibsie. Hugh becomes the only one who can calm her.","After the 1995 boat tragedy, Peter Biggs sinks into depression and Hugh grows up fast.","Hospital stays and self-harm follow. Hugh stays.","April 2000: with her parents in Texas, Caoimhe confronts Mark and is later found dead under the footbridge. At the funeral Lizzie says Mark killed her. Nobody believes her, and Gibsie stays silent.","Lizzie and Hugh become a couple at Tommen, but she stops her medication and spirals."],
+  end:"At Halloween 2003, during a manic episode, Lizzie is with Hugh’s teammate Pierce O’Neill. Hugh ends it, and Lizzie makes a severe suicide attempt and is treated at Brickley House. In April 2004 she comes back stable and apologises. Hugh is with Katie. They both still love each other, and she lets him go.",
+  rem:["This ends just months before Binding 13 begins, so Lizzie in the earlier books makes much more sense now.","Lizzie still doesn’t know everything about what happened to Caoimhe.","The next Hughie and Lizzie book should carry them into 2005."]}
+};
+
+/* ---------- SPOILER STATE ---------- */
+let PROG=store.get("b13-progress",null); // number 0-6, 99 = all
+const lvlName=n=>n>=1&&n<=6?READ[n-1].title:"";
+function sp(level,html){ // wrap if level beyond progress
+  if(!level) return html;
+  return `<span class="spoil" data-s="${level}" title="Spoiler from ${esc(lvlName(level))}">${html}</span>`;
+}
+function hidden(level){return level&&PROG!==99&&level>(PROG||0);}
+function applySpoilers(root=document){
+  root.querySelectorAll(".spoil").forEach(el=>{
+    const s=+el.dataset.s;
+    if(hidden(s)&&!el.classList.contains("shown")){el.classList.add("hide");el.setAttribute("tabindex","0");el.setAttribute("role","button");el.setAttribute("aria-label","Hidden spoiler from "+lvlName(s)+". Tap to reveal.");}
+    else{el.classList.remove("hide");el.removeAttribute("tabindex");el.removeAttribute("role");el.removeAttribute("aria-label");}
+  });
+}
+document.addEventListener("click",e=>{const s=e.target.closest(".spoil.hide");if(s){e.preventDefault();e.stopPropagation();s.classList.add("shown");s.classList.remove("hide");}},true);
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches(".spoil.hide")){e.preventDefault();e.target.classList.add("shown");e.target.classList.remove("hide");}});
+function updateSpoilLabel(){$("#spoilLabel").textContent=PROG===99?"Spoilers: all on":PROG?`Reading: ${READ[PROG-1].title}`:"Spoilers";}
+function openModal(){
+  const cur=PROG===null?1:PROG;
+  $("#progList").innerHTML=READ.map(b=>`<label><input type="radio" name="prog" value="${b.n}" ${cur===b.n?"checked":""}><span class="no">${b.n}</span><span>${esc(b.title)}</span><span class="dot" style="background:${ARCS[b.arc].c};margin-left:auto"></span></label>`).join("")+
+   `<label><input type="radio" name="prog" value="99" ${cur===99?"checked":""}><span class="no">✓</span><span>I’ve read them all</span></label>`;
+  $("#spoilModal").classList.add("on");
+  setTimeout(()=>$("#progList input:checked")?.focus(),50);
+}
+function closeModal(v){PROG=v;store.set("b13-progress",v);$("#spoilModal").classList.remove("on");updateSpoilLabel();rerenderAll();}
+$("#spoilBtn").onclick=openModal;
+$("#smDone").onclick=()=>{const v=+($("#progList input:checked")||{}).value||1;closeModal(v);};
+$("#smAll").onclick=()=>closeModal(99);
+$("#spoilModal").addEventListener("click",e=>{if(e.target.id==="spoilModal"){closeModal(PROG===null?1:PROG);}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#spoilModal").classList.contains("on"))closeModal(PROG===null?1:PROG);});
+
+/* ---------- helpers ---------- */
+function arcSelect(sel,label="All story arcs"){sel.innerHTML=`<option value="all">${label}</option>`+Object.entries(ARCS).map(([k,a])=>`<option value="${k}">${a.name}</option>`).join("");}
+function bookSelect(sel){sel.innerHTML=`<option value="all">All books</option>`+READ.map(b=>`<option value="${b.n}">${b.n}. ${esc(b.title)}</option>`).join("");}
+function buyLink(b){return AFFILIATE[b.id]||("https://www.booktopia.com.au/search?keywords="+encodeURIComponent(b.title+" Chloe Walsh"));}
+function avatarColor(c){return c.arc?ARCS[c.arc].hex:"#9fb0c3";}
+function initials(c){const n=c.name.replace(/“.*?”/,"").trim().split(/\s+/);return (n[0][0]+(n[n.length-1][0]||"")).toUpperCase();}
+function flash(el){if(!el)return;el.classList.add("flash");el.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>el.classList.remove("flash"),1800);}
+
+/* ---------- TABS ---------- */
+const TABS=["books","chars","time","recaps","tree","conn"];
+function showTab(t,push=true){
+  if(!TABS.includes(t))t="books";
+  
+  $$("section.panel").forEach(p=>p.classList.toggle("on",p.id==="p-"+t));
+  if(push){try{history.replaceState(null,"","#"+t);}catch(e){}}
+  if(typeof syncBottom==="function")syncBottom(t);
+  try{if(t==="conn")buildNet();if(t==="time"&&!$("#sub-towns").hidden)initLeaf();}catch(e){console.warn(e);}
+  
+}
+$("#goBooks").onclick=()=>{showTab("books");window.scrollTo({top:($("main").offsetTop-8),behavior:"smooth"});};
+
+function syncBottom(t){$$(".bnav [data-bt]").forEach(b=>b.dataset.bt===t?b.setAttribute("aria-current","page"):b.removeAttribute("aria-current"));}
+$$(".bnav [data-bt]").forEach(b=>b.onclick=()=>{showTab(b.dataset.bt);window.scrollTo({top:($("main").offsetTop-8),behavior:"smooth"});});
+/* ---------- HEADER PILLS ---------- */
+
+
+/* ---------- READING ORDER ---------- */
+const roOpen=store.get("b13-ro-open",false);
+if(roOpen){$("#ro").classList.add("open");$("#roHead").setAttribute("aria-expanded","true");}
+$("#roHead").onclick=()=>{const o=$("#ro").classList.toggle("open");$("#roHead").setAttribute("aria-expanded",o);store.set("b13-ro-open",o);};
+arcSelect($("#roArc"));
+function renderRO(){
+  const a=$("#roArc").value;
+  const list=BOOKS.filter(b=>a==="all"||b.arc===a);
+  $("#roCount").textContent=a==="all"?`${READ.length} books + 1 coming`:`${list.length} books`;
+  $("#roList").innerHTML=list.map(b=>`<li class="${b.upcoming?"soon":""}"><a href="#book-${b.id}" data-book="${b.id}"><span class="no">${b.n}</span><span class="dot" style="background:${b.arc?ARCS[b.arc].c:"var(--muted)"}"></span><span>${esc(b.title)}</span><span class="yr">${b.year}</span></a></li>`).join("");
+  const f=$("#posterFrame");if(f&&f.dataset.arc!==a){f.dataset.arc=a;f.src="poster.html"+(a==="all"?"":"?arc="+a);}
+}
+$("#roArc").onchange=renderRO;
+$("#roList").addEventListener("click",e=>{const a=e.target.closest("a[data-book]");if(!a)return;e.preventDefault();$("#bkArc").value="all";renderBooks();flash(document.getElementById("book-"+a.dataset.book));});
+window.addEventListener("message",e=>{if(e.data&&e.data.posterHeight){$("#posterFrame").style.height=(e.data.posterHeight+6)+"px";}});
+
+/* ---------- BOOKS ---------- */
+arcSelect($("#bkArc"));
+$("#bkArc").onchange=renderBooks;
+function coverHTML(b){
+  const c=b.arc?ARCS[b.arc].hex:"#55657a";
+  const parts=b.title.split(" ");
+  const spine=`<div class="spine" style="background:linear-gradient(160deg,${c},#0b1420)"><b>${esc(parts[1]||"?")}</b><i>${esc(parts[0])}</i></div>`;
+  const img=b.isbn.length?`<img alt="Cover of ${esc(b.title)}" loading="lazy" data-isbns="${b.isbn.join(",")}" data-i="0" src="https://covers.openlibrary.org/b/isbn/${b.isbn[0]}-M.jpg?default=false">`:"";
+  return `<div class="cover"><span class="badge">${b.n}</span>${spine}${img}</div>`;
+}
+function wireCovers(){$$("#books .cover img").forEach(img=>{img.addEventListener("error",()=>coverFail(img));img.addEventListener("load",()=>{if(img.naturalWidth<20)coverFail(img);});if(img.complete&&img.naturalWidth===0)coverFail(img);});}
+function coverFail(img){const l=img.dataset.isbns.split(",");let i=+img.dataset.i+1;if(i<l.length){img.dataset.i=i;img.src=`https://covers.openlibrary.org/b/isbn/${l[i]}-M.jpg?default=false`;}else img.remove();}
+function renderBooks(){
+  const a=$("#bkArc").value;
+  $("#books").innerHTML=BOOKS.filter(b=>a==="all"||b.arc===a).map(b=>`
+  <article class="card book ${b.upcoming?"upcoming":""}" id="book-${b.id}">
+    <div class="bk-top">${coverHTML(b)}
+      <div class="bk-meta">
+        <div class="arc"><span class="dot" style="background:${b.arc?ARCS[b.arc].c:"var(--muted)"}"></span>${b.arc?ARCS[b.arc].name:"Coming soon"}</div>
+        <h3>${esc(b.title)}</h3>
+        <div class="yr">Book ${b.n} · ${b.year}</div>
+        <div class="pov"><b>Told by:</b> ${esc(b.pov)}</div>
+      </div>
+    </div>
+    <div class="bk-body">
+      <div><span class="lbl">Main plot</span><p>${esc(b.plot)}</p></div>
+      ${b.upcoming?"":`<div><span class="lbl">Setting</span><p>${esc(b.set)}</p></div>
+      <div><span class="lbl">Main characters</span><div class="names">${b.chars.map(id=>`<button class="name" data-char="${id}">${esc(CH[id].name.replace(/ “.*?”/,""))}</button>`).join("")}</div></div>`}
+      <div class="bk-actions">
+        ${b.upcoming?`<span class="hiddenmsg">Buy link coming once it’s announced.</span>`:`<a class="btn gold" href="${buyLink(b)}" target="_blank" rel="noopener sponsored">Buy the book</a><button class="btn" data-recap="${b.id}">Recap</button>`}
+      </div>
+    </div>
+  </article>`).join("");
+  wireCovers();
+}
+$("#books").addEventListener("click",e=>{
+  const n=e.target.closest("[data-char]");if(n){gotoChar(n.dataset.char);return;}
+  const r=e.target.closest("[data-recap]");if(r){gotoRecap(r.dataset.recap);}
+});
+
+/* ---------- CHARACTERS ---------- */
+bookSelect($("#cBook"));arcSelect($("#cArc"));
+let roleFilter="all";
+$("#roleChips").innerHTML=[["all","Everyone"],["main","Main"],["supporting","Supporting"],["antagonist","Antagonists"]].map(([k,l])=>`<button class="chip" data-role="${k}" aria-pressed="${k==="all"}">${l}</button>`).join("");
+$("#roleChips").onclick=e=>{const b=e.target.closest("[data-role]");if(!b)return;roleFilter=b.dataset.role;$$("#roleChips .chip").forEach(c=>c.setAttribute("aria-pressed",c===b));renderChars();};
+["#cq","#cBook","#cArc"].forEach(s=>$(s).addEventListener("input",renderChars));
+function inFamily(id){return FAMILIES.some(f=>JSON.stringify(f).includes(`"${id}"`));}
+function renderChars(){
+  const q=$("#cq").value.trim().toLowerCase(),bk=$("#cBook").value,ar=$("#cArc").value;
+  const list=CHARS.filter(c=>(roleFilter==="all"||c.role===roleFilter)&&(bk==="all"||c.in.includes(+bk))&&(ar==="all"||c.arc===ar)&&(!q||[c.name,c.nick,c.job,c.from,c.about,c.say].join(" ").toLowerCase().includes(q)));
+  $("#cCount").textContent=`${list.length} of ${CHARS.length} characters`;
+  $("#chars").innerHTML=list.map(c=>{
+    const first=READ[c.first-1];
+    return `<article class="card ch" id="char-${c.id}">
+      <div class="ch-head"><div class="avatar" style="background:${avatarColor(c)}">${initials(c)}</div>
+        <div><h3>${sp(c.first>1?c.first:0,esc(c.name))}</h3><div class="say">🔊 Say it: ${esc(c.say)}</div></div>
+        <span class="role ${c.role}">${c.role}</span></div>
+      <dl class="facts">
+        ${c.nick?`<dt>Known as</dt><dd>${esc(c.nick)}</dd>`:""}
+        <dt>From</dt><dd>${esc(c.from)}</dd>
+        <dt>Series</dt><dd>Boys of Tommen${c.arc?" · "+ARCS[c.arc].name:""}</dd>
+        <dt>Features</dt><dd>${esc(c.feat)}</dd>
+        <dt>About</dt><dd>${sp(c.first>1?c.first:0,esc(c.about))}</dd>
+        <dt>Job</dt><dd>${esc(c.job)}</dd>
+        <dt>Love</dt><dd>${sp(c.loveS,esc(c.love))}</dd>
+        <dt>Age</dt><dd>${esc(c.age)}</dd>
+        <dt>Big moment</dt><dd>${sp(c.bigS,esc(c.big))}</dd>
+        <dt>Later on</dt><dd>${sp(c.laterS,esc(c.later))}</dd>
+        <dt>First seen</dt><dd>Book ${c.first}: ${esc(first.title)}</dd>
+      </dl>
+      <div class="ch-actions">
+        ${inFamily(c.id)?`<button class="btn ghost" data-tree="${c.id}">Family tree</button>`:""}
+        <button class="btn ghost" data-conn="${c.id}">Connections</button>
+      </div>
+    </article>`;}).join("")||`<p class="hiddenmsg">No characters match that search.</p>`;
+  applySpoilers($("#chars"));
+}
+$("#chars").addEventListener("click",e=>{const t=e.target.closest("[data-tree]");if(t){gotoTree(t.dataset.tree);return;}const c=e.target.closest("[data-conn]");if(c)gotoConn(c.dataset.conn);});
+function gotoChar(id){showTab("chars");$("#cq").value="";$("#cBook").value="all";$("#cArc").value="all";roleFilter="all";$$("#roleChips .chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.role==="all"));renderChars();setTimeout(()=>flash(document.getElementById("char-"+id)),60);}
+
+/* ---------- TIMELINE ---------- */
+bookSelect($("#tBook"));arcSelect($("#tArc"));
+["#tq","#tBook","#tArc"].forEach(s=>$(s).addEventListener("input",renderTimeline));
+function renderTimeline(){
+  const q=$("#tq").value.trim().toLowerCase(),bk=$("#tBook").value,ar=$("#tArc").value;
+  const list=TIMELINE.map((e,i)=>({...e,i})).filter(e=>(bk==="all"||e.b===+bk)&&(ar==="all"||e.arc===ar)&&(!q||(e.when+" "+e.t+" "+e.d+" "+e.place).toLowerCase().includes(q)));
+  $("#tl").innerHTML=list.map(e=>`<li class="card" id="tl-${e.i}">
+     <div class="when">${esc(e.when)}</div>
+     <h3>${sp(e.b,esc(e.t))}</h3>
+     <p style="margin:4px 0 0;color:var(--soft);font-size:14.5px">${sp(e.b,esc(e.d))}</p>
+     <div class="tags">${e.b?`<span class="tg">📖 ${esc(READ[e.b-1].title)}</span>`:""}${e.arc?`<span class="tg"><span class="dot" style="background:${ARCS[e.arc].c};width:8px;height:8px"></span> ${ARCS[e.arc].name}</span>`:""}<span class="tg">📍 ${esc(e.place)}</span></div>
+   </li>`).join("")||`<p class="hiddenmsg">No events match.</p>`;
+  applySpoilers($("#tl"));
+}
+$$(".subtabs .chip").forEach(b=>b.onclick=()=>{$$(".subtabs .chip").forEach(c=>c.setAttribute("aria-pressed",c===b));const town=b.dataset.sub==="towns";$("#sub-timeline").hidden=town;$("#sub-towns").hidden=!town;if(town)initLeaf();});
+
+/* ---------- PLACES ---------- */
+let placeFilter="all";
+$("#placeChips").innerHTML=[["all","All places"],["town","In Ballylaggin"],["real","Real places"]].map(([k,l])=>`<button class="chip" data-pf="${k}" aria-pressed="${k==="all"}">${l}</button>`).join("");
+$("#placeChips").onclick=e=>{const b=e.target.closest("[data-pf]");if(!b)return;placeFilter=b.dataset.pf;$$("#placeChips .chip").forEach(c=>c.setAttribute("aria-pressed",c===b));renderPlaces();};
+function renderPlaces(){
+  const list=PLACES.filter(p=>placeFilter==="all"||(placeFilter==="real"?!!p.ll&&p.real!==false:!!p.xy));
+  $("#places").innerHTML=list.map(p=>`<article class="card place" id="place-${p.id}"><div class="kind">${esc(p.kind)}</div><h3>${sp(p.b>1?p.b:0,esc(p.name))}</h3><p>${sp(p.b>1?p.b:0,esc(p.d))}</p></article>`).join("");
+  applySpoilers($("#places"));
+}
+function renderTown(){
+  const s=$("#town");
+  let g=`<defs><pattern id="rain" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(18)"><line x1="0" y1="0" x2="0" y2="8" stroke="rgba(170,200,230,.08)" stroke-width="1.5"/></pattern></defs>
+  <rect width="600" height="420" fill="#10213a"/><rect width="600" height="420" fill="url(#rain)"/>
+  <path d="M-10 70 C 120 40, 200 90, 300 62 S 480 30, 610 60" stroke="#2c5a86" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <path d="M-10 70 C 120 40, 200 90, 300 62 S 480 30, 610 60" stroke="#3f74a6" stroke-width="2" fill="none" stroke-dasharray="6 8"/>
+  <text x="560" y="40" fill="#7fa6cc" font-size="12" font-family="Source Sans 3" text-anchor="end">the river</text>
+  <path d="M60 200 L540 200 M300 80 L300 400 M140 120 L460 340" stroke="rgba(233,238,244,.12)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="370" y="95" width="110" height="60" rx="8" fill="rgba(47,122,92,.35)" stroke="rgba(111,195,160,.4)"/>
+  <text x="425" y="170" fill="#6fc3a0" font-size="11" text-anchor="middle" font-family="Source Sans 3">the pitch</text>
+  <text x="300" y="250" fill="rgba(217,164,65,.5)" font-size="34" text-anchor="middle" font-family="Bebas Neue" letter-spacing="3">BALLYLAGGIN</text>`;
+  PLACES.filter(p=>p.xy&&p.id!=="bally").forEach(p=>{
+    const hid=hidden(p.b);
+    const lbl=hid?"?":p.name.replace("Ballylaggin Community School (BCS)","BCS").replace("The ","");
+    g+=`<g class="pin" tabindex="0" role="button" aria-label="${esc(hid?"Hidden place":p.name)}" data-place="${p.id}"><circle cx="${p.xy[0]}" cy="${p.xy[1]}" r="9" fill="${hid?"#55657a":"#d9a441"}" stroke="#0b1420" stroke-width="2"/>
+      <text x="${p.xy[0]}" y="${p.xy[1]-14}" fill="#e9eef4" font-size="12.5" font-weight="600" text-anchor="middle" font-family="Source Sans 3" style="paint-order:stroke;stroke:#0b1420;stroke-width:4px">${esc(lbl)}</text></g>`;
+  });
+  s.innerHTML=g;
+}
+$("#town").addEventListener("click",e=>{const p=e.target.closest("[data-place]");if(p){placeFilter="all";$$("#placeChips .chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.pf==="all"));renderPlaces();flash(document.getElementById("place-"+p.dataset.place));}});
+$("#town").addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.matches("[data-place]"))e.target.dispatchEvent(new MouseEvent("click",{bubbles:true}));});
+let leafMap=null;
+function initLeaf(){try{initLeaf2();}catch(e){console.warn("map",e);}}
+function initLeaf2(){
+  if(leafMap){setTimeout(()=>leafMap.invalidateSize(),60);return;}
+  if(!window.L){if((initLeaf.tries=(initLeaf.tries||0)+1)<20)setTimeout(initLeaf,300);else $("#leaf").innerHTML='<p class="hiddenmsg" style="padding:16px">The map couldn’t load here. Use the Ballylaggin sketch and place cards instead.</p>';return;}
+  leafMap=L.map("leaf",{scrollWheelZoom:false}).setView([53.1,-7.6],6);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{attribution:'&copy; OpenStreetMap contributors &copy; CARTO',maxZoom:18}).addTo(leafMap);
+  PLACES.filter(p=>p.ll).forEach(p=>{
+    const m=L.circleMarker(p.ll,{radius:p.real===false?11:8,color:"#0b1420",weight:2,fillColor:p.real===false?"#d9a441":"#5aa2d6",fillOpacity:1}).addTo(leafMap);
+    m.bindPopup(`<b>${esc(p.name)}</b><br><small>${esc(p.kind)}${p.real===false?" (approximate)":""}</small><br>${esc(p.d)}`);
+  });
+  setTimeout(()=>leafMap.invalidateSize(),80);
+}
+
+/* ---------- RECAPS ---------- */
+arcSelect($("#rArc"));
+["#rq","#rArc"].forEach(s=>$(s).addEventListener("input",renderRecaps));
+const unlocked=new Set();
+function renderRecaps(){
+  const q=$("#rq").value.trim().toLowerCase(),ar=$("#rArc").value;
+  const openIds=new Set($$("details.recap[open]").map(d=>d.dataset.id));
+  const list=READ.filter(b=>(ar==="all"||b.arc===ar)&&(!q||JSON.stringify(RECAPS[b.id]).toLowerCase().includes(q)||b.title.toLowerCase().includes(q)));
+  $("#recaps").innerHTML=list.map(b=>{
+    const r=RECAPS[b.id],locked=hidden(b.n)&&!unlocked.has(b.id);
+    return `<details class="card recap" id="recap-${b.id}" data-id="${b.id}" ${openIds.has(b.id)||q?"open":""}>
+      <summary><span class="no">${b.n}</span><span><h3>${esc(b.title)}</h3><span class="meta"><span class="dot" style="background:${ARCS[b.arc].c};width:8px;height:8px"></span> ${ARCS[b.arc].name} · ${esc(b.set)}</span></span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="rc-body">${locked?`<div class="rc-gate">🔒 This recap is past your reading point (${esc(READ[(PROG||1)-1]?.title||"")}).<br><br><button class="btn" data-unlock="${b.id}">Show it anyway</button></div>`:`
+        <div class="rc-box"><span class="lbl">Where it starts</span><p>${esc(r.start)}</p></div>
+        <div class="rc-box"><span class="lbl">How it ends</span><p>${esc(r.end)}</p></div>
+        <div class="rc-box full"><span class="lbl">What happens</span><ul>${r.what.map(w=>`<li>${esc(w)}</li>`).join("")}</ul></div>
+        <div class="rc-box remember full"><span class="lbl">Remember this going into the next book</span><ul>${r.rem.map(w=>`<li>${esc(w)}</li>`).join("")}</ul></div>`}
+      </div></details>`;}).join("")||`<p class="hiddenmsg">No recaps match.</p>`;
+}
+$("#recaps").addEventListener("click",e=>{const u=e.target.closest("[data-unlock]");if(u){unlocked.add(u.dataset.unlock);renderRecaps();}});
+function gotoRecap(id){showTab("recaps");$("#rq").value="";$("#rArc").value="all";renderRecaps();const d=document.getElementById("recap-"+id);if(d){d.open=true;setTimeout(()=>flash(d),60);}}
+
+/* ---------- FAMILY TREE ---------- */
+function personBtn(id,s){
+  const c=CH[id];const hid=hidden(Math.max(s||0,c.first>1?c.first:0));
+  const dead=DEAD[id]&&!hidden(DEAD[id]);
+  const short=c.name.replace(/ “.*?”/,"").replace("John Kavanagh Sr.","John Sr.");
+  const [first,...rest]=short.split(" ");
+  return `<button class="person ${dead?"dead":""} ${hid?"spoil":""}" ${hid?`data-s="${Math.max(s||0,c.first)}"`:""} data-pid="${id}" style="--c:${avatarColor(c)}">${esc(first)}<small>${esc(rest.join(" ")||"")}</small></button>`;
+}
+let treeHiddenCount=0;
+function unitHTML(u){
+  const s=u.s||0;
+  const partnerHidden=u.p.length>1&&hidden(s);
+  if(u.p.length===1&&hidden(Math.max(s,CH[u.p[0]].first>1?CH[u.p[0]].first:0))){treeHiddenCount++;return "";}
+  let inner=personBtn(u.p[0],0);
+  if(u.p.length>1){ if(partnerHidden){treeHiddenCount++;} else inner+=`<span class="heart">♥</span>`+personBtn(u.p[1],s); }
+  const kids=(u.kids||[]).map(k=>{const h=unitHTML(k);return h?`<li>${h}</li>`:"";}).join("");
+  return `<div class="unit">${inner}</div>${kids?`<ul>${kids}</ul>`:""}`;
+}
+function renderTree(){
+  treeHiddenCount=0;
+  $("#famGrid").innerHTML=FAMILIES.map(f=>{
+    let body=`<ul class="tree"><li>${unitHTML(f.root)}</li></ul>`;
+    if(f.extra){ if(hidden(f.extra.s)){treeHiddenCount++;} else body+=`<p class="fam-note" style="margin-top:14px">Second marriage</p><ul class="tree"><li>${unitHTML(f.extra)}</li></ul>`; }
+    return `<article class="card fam"><h3><span class="dot" style="background:${f.c}"></span>${esc(f.name)}</h3><p class="fam-note">${esc(f.note)}</p><div class="treewrap">${body}</div></article>`;
+  }).join("");
+  $("#treeHidden").textContent=treeHiddenCount?`${treeHiddenCount} relationship${treeHiddenCount>1?"s are":" is"} hidden by your spoiler setting.`:"";
+  applySpoilers($("#famGrid"));
+  if(treeFocus)focusTree(treeFocus,false);
+}
+let treeFocus=null;
+function relativesOf(id){
+  const out={Parents:[],Partner:[],Siblings:[],Children:[],Other:[]};
+  (REL.parents[id]||[]).forEach(p=>{if(!out.Parents.some(x=>x.id===p.id))out.Parents.push(p);});
+  (REL.partners[id]||[]).forEach(p=>out.Partner.push(p));
+  Object.entries(REL.parents).forEach(([kid,ps])=>{if(ps.some(p=>p.id===id)&&!out.Children.some(x=>x.id===kid))out.Children.push({id:kid,s:ps[0].s});});
+  const myP=(REL.parents[id]||[]).map(p=>p.id);
+  Object.entries(REL.parents).forEach(([kid,ps])=>{if(kid!==id&&ps.some(p=>myP.includes(p.id))&&!out.Siblings.some(x=>x.id===kid))out.Siblings.push({id:kid,s:ps[0].s});});
+  (STEP[id]||[]).forEach(x=>out.Other.push(x));
+  return out;
+}
+function focusTree(id,scroll=true){
+  treeFocus=id;const rel=relativesOf(id);
+  const ids=new Set([].concat(...Object.values(rel)).filter(r=>!hidden(r.s)).map(r=>r.id));
+  $("#famGrid").classList.add("focusmode");
+  $$("#famGrid .person").forEach(p=>{p.classList.toggle("f-self",p.dataset.pid===id);p.classList.toggle("f-rel",ids.has(p.dataset.pid));});
+  const c=CH[id];
+  const row=(k,arr)=>{const vis=arr.filter(r=>!hidden(r.s));const hid=arr.length-vis.length;if(!arr.length)return "";
+    return `<dt>${k}</dt><dd>${vis.map(r=>`<button class="linky" data-pid="${r.id}">${esc(CH[r.id].name.replace(/ “.*?”/,""))}</button>${r.r?` <small>(${esc(r.r)})</small>`:""}${DEAD[r.id]&&!hidden(DEAD[r.id])?" †":""}`).join(", ")}${hid?`${vis.length?", ":""}<span class="hiddenmsg">${hid} hidden</span>`:""}</dd>`;};
+  $("#treePanel").innerHTML=`<div class="fp-head"><div class="avatar" style="background:${avatarColor(c)};width:40px;height:40px;font-size:20px">${initials(c)}</div><h3>${esc(c.name)}</h3><button class="btn ghost x" id="treeClose" aria-label="Clear focus">✕</button></div>
+   <dl class="fp-list">${row("Parents",rel.Parents)}${row("Partner",rel.Partner)}${row("Siblings",rel.Siblings)}${row("Children",rel.Children)}${row("Also",rel.Other)}</dl>
+   <div class="ch-actions" style="margin-top:10px"><button class="btn ghost" data-goc="${id}">Character card</button><button class="btn ghost" data-gon="${id}">Connections</button></div>`;
+  $("#treePanel").classList.add("on");
+  if(scroll){const el=$(`#famGrid .person[data-pid="${id}"]`);el&&el.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});}
+}
+function clearTree(){treeFocus=null;$("#famGrid").classList.remove("focusmode");$("#treePanel").classList.remove("on");$$("#famGrid .person").forEach(p=>p.classList.remove("f-self","f-rel"));}
+$("#famGrid").addEventListener("click",e=>{const p=e.target.closest(".person:not(.hide)");if(!p)return;if(treeFocus===p.dataset.pid)clearTree();else focusTree(p.dataset.pid,false);});
+$("#treePanel").addEventListener("click",e=>{if(e.target.closest("#treeClose")){clearTree();return;}const l=e.target.closest("[data-pid]");if(l){focusTree(l.dataset.pid);return;}const g=e.target.closest("[data-goc]");if(g){gotoChar(g.dataset.goc);return;}const n=e.target.closest("[data-gon]");if(n)gotoConn(n.dataset.gon);});
+function gotoTree(id){showTab("tree");setTimeout(()=>focusTree(id),60);}
+
+/* ---------- CONNECTIONS ---------- */
+let typeOn=new Set(Object.keys(ETYPES));
+$("#connChips").innerHTML=Object.entries(ETYPES).map(([k,t])=>`<button class="chip" data-et="${k}" aria-pressed="true"><span class="dot" style="background:${t.c}"></span>${t.name}</button>`).join("");
+$("#connLegend").innerHTML=Object.values(ETYPES).map(t=>`<span><i style="border-color:${t.c}"></i>${t.name}</span>`).join("");
+$("#connChips").onclick=e=>{const b=e.target.closest("[data-et]");if(!b)return;const k=b.dataset.et;typeOn.has(k)?typeOn.delete(k):typeOn.add(k);b.setAttribute("aria-pressed",typeOn.has(k));drawNet();};
+let POS=null,netBuilt=false,connFocus=null,zoom=1;
+function layout(){
+  // cluster seeds by arc, then simple force simulation (deterministic)
+  const W=1000,H=760,seeds={js:[300,250],ja:[250,520],gc:[700,280],hl:[720,540],null:[500,400]};
+  const nodes=CHARS.map((c,i)=>{const s=seeds[c.arc]||seeds.null;const a=i*2.399;return {id:c.id,x:s[0]+Math.cos(a)*60*(1+(i%3)),y:s[1]+Math.sin(a)*60*(1+(i%3)),vx:0,vy:0};});
+  const idx=Object.fromEntries(nodes.map((n,i)=>[n.id,i]));
+  const links=EDGES.map(e=>[idx[e[0]],idx[e[1]],e[2]]);
+  for(let it=0;it<420;it++){
+    const k=1-it/420;
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+      const a=nodes[i],b=nodes[j];let dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy+.01,d=Math.sqrt(d2);
+      const f=5200/d2;dx/=d;dy/=d;a.vx-=dx*f;a.vy-=dy*f;b.vx+=dx*f;b.vy+=dy*f;}
+    links.forEach(([i,j,t])=>{const a=nodes[i],b=nodes[j];const dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||1;const L=t==="fam"?95:t==="rom"?80:130;const f=(d-L)*0.02;a.vx+=dx/d*f;a.vy+=dy/d*f;b.vx-=dx/d*f;b.vy-=dy/d*f;});
+    nodes.forEach(n=>{n.vx+=(500-n.x)*0.0025;n.vy+=(380-n.y)*0.0025;n.x+=n.vx*k;n.y+=n.vy*k;n.vx*=.6;n.vy*=.6;n.x=Math.max(50,Math.min(W-50,n.x));n.y=Math.max(40,Math.min(H-30,n.y));});
+  }
+  return Object.fromEntries(nodes.map(n=>[n.id,n]));
+}
+function netLabel(c){const m=c.name.match(/“(.*?)”/);if(m)return m[1];if(c.id==="johnsr")return "John Sr.";return c.name.split(" ")[0];}
+function buildNet(){if(!netBuilt){POS=layout();netBuilt=true;}drawNet();}
+function drawNet(){
+  if(!POS)return;
+  let hiddenE=0;const visNodes=new Set();
+  const edges=EDGES.filter(e=>{if(!typeOn.has(e[2]))return false;if(hidden(e[5])||hidden(Math.max(CH[e[0]].first,CH[e[1]].first)>1?Math.max(CH[e[0]].first,CH[e[1]].first):0)){hiddenE++;return false;}visNodes.add(e[0]);visNodes.add(e[1]);return true;});
+  CHARS.forEach(c=>{if(!hidden(c.first>1?c.first:0))visNodes.add(c.id);});
+  let g="";
+  edges.forEach((e,i)=>{const a=POS[e[0]],b=POS[e[1]];const mx=(a.x+b.x)/2+(a.y-b.y)*0.08,my=(a.y+b.y)/2+(b.x-a.x)*0.08;
+    g+=`<path class="edge" data-a="${e[0]}" data-b="${e[1]}" d="M${a.x.toFixed(1)},${a.y.toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${b.x.toFixed(1)},${b.y.toFixed(1)}" stroke="${ETYPES[e[2]].hex}" ${e[2]==="harm"?'stroke-dasharray="5 5"':""}/>`;});
+  CHARS.filter(c=>visNodes.has(c.id)).forEach(c=>{const p=POS[c.id];const r=c.role==="main"?15:10;
+    g+=`<g class="node" data-id="${c.id}" tabindex="0" role="button" aria-label="${esc(c.name)}"><circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${r}" fill="${avatarColor(c)}"/><text x="${p.x.toFixed(1)}" y="${(p.y+r+15).toFixed(1)}" text-anchor="middle">${esc(netLabel(c))}</text></g>`;});
+  $("#net").innerHTML=g;
+  $("#connHidden").textContent=hiddenE?`${hiddenE} connection${hiddenE>1?"s are":" is"} hidden by your spoiler setting.`:"";
+  if(connFocus&&visNodes.has(connFocus))focusConn(connFocus,false);else clearConn();
+}
+function focusConn(id,scroll=true){
+  connFocus=id;const svg=$("#net");svg.classList.add("focus");
+  const nbrs=new Set([id]);
+  $$("#net .edge").forEach(p=>{const on=p.dataset.a===id||p.dataset.b===id;p.classList.toggle("on",on);if(on){nbrs.add(p.dataset.a);nbrs.add(p.dataset.b);}});
+  $$("#net .node").forEach(n=>{n.classList.toggle("on",nbrs.has(n.dataset.id));n.classList.toggle("self",n.dataset.id===id);});
+  const c=CH[id];
+  const mine=EDGES.filter(e=>(e[0]===id||e[1]===id)&&typeOn.has(e[2]));
+  const vis=mine.filter(e=>!hidden(e[5])&&!hidden(CH[e[0]===id?e[1]:e[0]].first>1?CH[e[0]===id?e[1]:e[0]].first:0));
+  $("#connPanel").innerHTML=`<div class="fp-head"><div class="avatar" style="background:${avatarColor(c)};width:40px;height:40px;font-size:20px">${initials(c)}</div><h3>${esc(c.name)}</h3><button class="btn ghost x" id="connClose" aria-label="Clear focus">✕</button></div>
+   <div class="connlist">${vis.map(e=>{const o=e[0]===id?e[1]:e[0];return `<div class="conn-item"><span class="ty" style="background:${ETYPES[e[2]].hex}">${ETYPES[e[2]].name}</span><div><button class="linky" data-cid="${o}"><b>${esc(CH[o].name)}</b></button> · ${esc(e[3])}${e[4]?`<br><span>${esc(e[4])}</span>`:""}</div></div>`;}).join("")||`<p class="hiddenmsg">No visible connections with these filters.</p>`}</div>
+   ${mine.length>vis.length?`<p class="hiddencount">${mine.length-vis.length} more hidden by your spoiler setting.</p>`:""}
+   <div class="ch-actions" style="margin-top:10px"><button class="btn ghost" data-goc="${id}">Character card</button>${inFamily(id)?`<button class="btn ghost" data-got="${id}">Family tree</button>`:""}</div>`;
+  $("#connPanel").classList.add("on");
+  if(scroll){const n=$(`#net .node[data-id="${id}"]`);n&&n.scrollIntoView({behavior:"smooth",block:"center",inline:"center"});}
+}
+function clearConn(){connFocus=null;$("#net").classList.remove("focus");$("#connPanel").classList.remove("on");}
+$("#net").addEventListener("click",e=>{const n=e.target.closest(".node");if(!n){clearConn();return;}connFocus===n.dataset.id?clearConn():focusConn(n.dataset.id,false);});
+$("#net").addEventListener("keydown",e=>{if(e.key==="Enter"){const n=e.target.closest(".node");n&&focusConn(n.dataset.id,false);}});
+$("#connPanel").addEventListener("click",e=>{if(e.target.closest("#connClose")){clearConn();return;}const l=e.target.closest("[data-cid]");if(l){focusConn(l.dataset.cid);return;}const g=e.target.closest("[data-goc]");if(g){gotoChar(g.dataset.goc);return;}const t=e.target.closest("[data-got]");if(t)gotoTree(t.dataset.got);});
+function setZoom(z){zoom=Math.max(1,Math.min(2.6,z));$("#net").style.minWidth=(720*zoom)+"px";$("#net").style.width=(100*zoom)+"%";}
+$("#zIn").onclick=()=>setZoom(zoom+.3);$("#zOut").onclick=()=>setZoom(zoom-.3);
+function gotoConn(id){showTab("conn");setTimeout(()=>focusConn(id),80);}
+
+/* ---------- GLOBAL SEARCH ---------- */
+function searchIndex(){
+  const items=[];
+  BOOKS.forEach(b=>items.push({k:"Book",t:b.title,s:`Book ${b.n} · ${b.pov}`,txt:b.title+" "+b.plot+" "+b.pov,go:()=>{showTab("books");$("#bkArc").value="all";renderBooks();flash(document.getElementById("book-"+b.id));}}));
+  CHARS.forEach(c=>{if(hidden(c.first>1?c.first:0))return;items.push({k:"Character",t:c.name,s:c.job,txt:[c.name,c.nick,c.job,c.from,c.say,c.about,c.feat].join(" "),go:()=>gotoChar(c.id)});});
+  PLACES.forEach(p=>{if(hidden(p.b))return;items.push({k:"Place",t:p.name,s:p.kind,txt:p.name+" "+p.kind+" "+p.d,go:()=>{showTab("time");$$(".subtabs .chip")[1].click();placeFilter="all";renderPlaces();setTimeout(()=>flash(document.getElementById("place-"+p.id)),80);}});});
+  TIMELINE.forEach((e,i)=>{if(hidden(e.b))return;items.push({k:"Timeline",t:e.t,s:e.when,txt:e.when+" "+e.t+" "+e.d+" "+e.place,go:()=>{showTab("time");$$(".subtabs .chip")[0].click();$("#tq").value="";$("#tBook").value="all";$("#tArc").value="all";renderTimeline();setTimeout(()=>flash(document.getElementById("tl-"+i)),60);}});});
+  READ.forEach(b=>{if(hidden(b.n))return;items.push({k:"Recap",t:b.title+" recap",s:"Where it starts, what happens, how it ends",txt:JSON.stringify(RECAPS[b.id]),go:()=>gotoRecap(b.id)});});
+  return items;
+}
+let gIdx=-1;
+$("#gq").addEventListener("input",()=>{
+  const q=$("#gq").value.trim().toLowerCase();const box=$("#gres");
+  if(q.length<2){box.classList.remove("on");box.innerHTML="";return;}
+  const res=searchIndex().map(it=>{const t=it.t.toLowerCase();const score=t.startsWith(q)?3:t.includes(q)?2:it.txt.toLowerCase().includes(q)?1:0;return {...it,score};}).filter(r=>r.score).sort((a,b)=>b.score-a.score).slice(0,12);
+  window._gres=res;gIdx=-1;
+  box.innerHTML=res.length?res.map((r,i)=>`<div class="gres" role="option" tabindex="-1" data-i="${i}"><span class="k">${r.k}</span><span><b>${esc(r.t)}</b><small>${esc(r.s||"")}</small></span></div>`).join(""):`<div class="gres"><span class="k">—</span><span><b>No matches</b><small>Spoilers past your reading point aren’t searched.</small></span></div>`;
+  box.classList.add("on");
+});
+$("#gres").addEventListener("click",e=>{const r=e.target.closest("[data-i]");if(!r)return;pickG(+r.dataset.i);});
+function pickG(i){const r=window._gres[i];if(!r)return;$("#gres").classList.remove("on");$("#gq").blur();r.go();}
+$("#gq").addEventListener("keydown",e=>{const opts=$$("#gres [data-i]");if(!opts.length)return;
+  if(e.key==="ArrowDown"){e.preventDefault();gIdx=Math.min(opts.length-1,gIdx+1);opts[gIdx].focus();}
+  if(e.key==="Enter"){e.preventDefault();pickG(gIdx<0?0:gIdx);}});
+$("#gres").addEventListener("keydown",e=>{const opts=$$("#gres [data-i]");if(e.key==="ArrowDown"){e.preventDefault();gIdx=Math.min(opts.length-1,gIdx+1);opts[gIdx].focus();}if(e.key==="ArrowUp"){e.preventDefault();gIdx=Math.max(0,gIdx-1);opts[gIdx].focus();}if(e.key==="Enter")pickG(gIdx);});
+document.addEventListener("click",e=>{if(!e.target.closest(".gsearch"))$("#gres").classList.remove("on");});
+
+/* ---------- SHARE ---------- */
+$("#shareBtn").onclick=async()=>{
+  const url=location.href.split("#")[0],lbl=$("#shareBtn span");
+  const data={title:"The Boys of Tommen · Reader’s Guide",text:"A spoiler-safe guide to Chloe Walsh’s Boys of Tommen series: reading order, characters, recaps and more.",url};
+  try{if(navigator.share){await navigator.share(data);return;}}catch(e){if(e&&e.name==="AbortError")return;}
+  try{await navigator.clipboard.writeText(url);lbl.textContent="Link copied!";}
+  catch(e){lbl.textContent=url;}
+  setTimeout(()=>lbl.textContent="Share",2500);
+};
+/* ---------- BACK TO TOP ---------- */
+const tt=$("#toTop");
+window.addEventListener("scroll",()=>tt.classList.toggle("on",window.scrollY>600),{passive:true});
+tt.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+
+/* ---------- INIT ---------- */
+function rerenderAll(){renderBooks();renderChars();renderTimeline();renderPlaces();renderTown();renderRecaps();renderTree();if(netBuilt)drawNet();applySpoilers();}
+renderRO();rerenderAll();updateSpoilLabel();
+showTab((location.hash||"#books").slice(1),false);syncBottom((TABS.includes((location.hash||"").slice(1))?(location.hash||"").slice(1):"books"));
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(TABS.includes(h))showTab(h,false);});
+if(PROG===null)setTimeout(openModal,400);
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boys of Tommen · Reading Order Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0b1420;--navy:#13233a;--gold:#d9a441;--text:#e9eef4;--muted:#9fb0c3}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:transparent;color:var(--text);font-family:"Source Sans 3",system-ui,sans-serif}
+  .wrap{padding:6px 2px 10px}
+  .stage{background:var(--navy);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px;display:flex;justify-content:center}
+  canvas{width:100%;max-width:420px;height:auto;border-radius:8px;display:block;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:10px}
+  button,select{font:600 14px "Source Sans 3",sans-serif;border-radius:999px;border:1px solid rgba(217,164,65,.6);background:transparent;color:var(--text);padding:9px 16px;min-height:40px;cursor:pointer}
+  button.primary{background:var(--gold);color:#1a1205;border-color:var(--gold)}
+  .note{font-size:12.5px;color:var(--muted);text-align:center;margin:8px 4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="stage"><canvas id="cv" width="1080" height="1350" aria-label="Reading order poster preview"></canvas></div>
+  <div class="bar">
+    <select id="arc" aria-label="Choose story arc">
+      <option value="all">All books</option>
+      <option value="js">Johnny &amp; Shannon</option>
+      <option value="ja">Joey &amp; Aoife</option>
+      <option value="gc">Gibsie &amp; Claire</option>
+      <option value="hl">Hughie &amp; Lizzie</option>
+    </select>
+    <button class="primary" id="dl">Download PNG</button>
+  </div>
+  <p class="note" id="note">Covers load from Open Library. If one can’t load, its coloured spine is used instead.</p>
+</div>
+<script>
+const ARCS={js:{name:"Johnny & Shannon",c:"#5aa2d6"},ja:{name:"Joey & Aoife",c:"#e0603f"},gc:{name:"Gibsie & Claire",c:"#f0b93c"},hl:{name:"Hughie & Lizzie",c:"#a68be6"}};
+const BOOKS=[
+ {n:1,t:"Binding 13",y:2018,a:"js",isbn:["9781728299945","9780349439242"]},
+ {n:2,t:"Keeping 13",y:2018,a:"js",isbn:["9781728299976","9780349439273"]},
+ {n:3,t:"Saving 6",y:2023,a:"ja",isbn:["9781464215995"]},
+ {n:4,t:"Redeeming 6",y:2023,a:"ja",isbn:["9781464216022"]},
+ {n:5,t:"Taming 7",y:2024,a:"gc",isbn:["9781464216053"]},
+ {n:6,t:"Releasing 10",y:2025,a:"hl",isbn:["9781464237232","9780349439341"]}
+];
+const cv=document.getElementById("cv"),ctx=cv.getContext("2d");
+const cache={};
+function loadCover(b){
+  if(cache[b.n]!==undefined) return Promise.resolve(cache[b.n]);
+  return new Promise(res=>{
+    let i=0;
+    const tryNext=()=>{
+      if(i>=b.isbn.length){cache[b.n]=null;return res(null);}
+      const img=new Image();img.crossOrigin="anonymous";
+      img.onload=()=>{if(img.naturalWidth>20){cache[b.n]=img;res(img);}else{i++;tryNext();}};
+      img.onerror=()=>{i++;tryNext();};
+      img.src="https://covers.openlibrary.org/b/isbn/"+b.isbn[i]+"-L.jpg?default=false";
+    };tryNext();
+  });
+}
+function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function spine(b,x,y,w,h){
+  const c=ARCS[b.a].c;const g=ctx.createLinearGradient(x,y,x+w,y+h);g.addColorStop(0,c);g.addColorStop(1,"#0b1420");
+  ctx.fillStyle=g;rr(x,y,w,h,10);ctx.fill();
+  ctx.fillStyle="rgba(255,255,255,.9)";ctx.textAlign="center";
+  ctx.font="160px 'Bebas Neue'";ctx.fillText(b.t.split(" ")[1],x+w/2,y+h*0.58);
+  ctx.font="600 30px 'Fraunces'";ctx.fillText(b.t.split(" ")[0],x+w/2,y+h*0.78);
+}
+let useCovers=true;
+async function draw(){
+  await document.fonts.ready;
+  const arc=document.getElementById("arc").value;
+  const list=BOOKS.filter(b=>arc==="all"||b.a===arc);
+  const W=1080,H=1350;
+  // background: rainy night
+  const bg=ctx.createLinearGradient(0,0,0,H);bg.addColorStop(0,"#13233a");bg.addColorStop(1,"#070d16");
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle="rgba(180,205,230,.06)";ctx.lineWidth=2;
+  for(let i=0;i<140;i++){const x=(i*73)%W,y=(i*131)%H;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-14,y+46);ctx.stroke();}
+  // big ghost 13
+  ctx.fillStyle="rgba(217,164,65,.07)";ctx.font="760px 'Bebas Neue'";ctx.textAlign="right";ctx.fillText("13",W+40,H-40);
+  // header
+  ctx.textAlign="center";ctx.fillStyle="#d9a441";ctx.font="44px 'Bebas Neue'";
+  ctx.fillText("THE BOYS OF TOMMEN · CHLOE WALSH",W/2,92);
+  ctx.fillStyle="#e9eef4";ctx.font="700 78px 'Fraunces'";ctx.fillText(arc==="all"?"Reading Order":ARCS[arc].name,W/2,178);
+  ctx.fillStyle="#9fb0c3";ctx.font="28px 'Source Sans 3'";ctx.fillText("Ballylaggin, Co. Cork · in recommended order",W/2,224);
+  // grid
+  const cols=list.length<=2?2:3, rows=Math.ceil(list.length/cols);
+  const cw=list.length<=2?330:290, ch=cw*1.5, gapX=48, gapY=120;
+  const totalW=cols*cw+(cols-1)*gapX, startX=(W-totalW)/2;
+  const areaTop=280, totalH=rows*ch+(rows-1)*gapY, startY=areaTop+Math.max(0,(H-areaTop-150-totalH)/2);
+  for(let k=0;k<list.length;k++){
+    const b=list[k],col=k%cols,row=Math.floor(k/cols);
+    const rowCount=Math.min(cols,list.length-row*cols);
+    const rowOffset=(cols-rowCount)*(cw+gapX)/2;
+    const x=startX+rowOffset+col*(cw+gapX), y=startY+row*(ch+gapY);
+    ctx.save();ctx.shadowColor="rgba(0,0,0,.55)";ctx.shadowBlur=30;ctx.shadowOffsetY=14;
+    ctx.fillStyle="#000";rr(x,y,cw,ch,10);ctx.fill();ctx.restore();
+    const img=useCovers?await loadCover(b):null;
+    if(img){ctx.save();rr(x,y,cw,ch,10);ctx.clip();
+      const r=Math.max(cw/img.naturalWidth,ch/img.naturalHeight),iw=img.naturalWidth*r,ih=img.naturalHeight*r;
+      ctx.drawImage(img,x+(cw-iw)/2,y+(ch-ih)/2,iw,ih);ctx.restore();}
+    else spine(b,x,y,cw,ch);
+    // number badge
+    ctx.fillStyle="#d9a441";ctx.beginPath();ctx.arc(x+8,y+8,34,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle="#1a1205";ctx.font="46px 'Bebas Neue'";ctx.textAlign="center";ctx.fillText(String(b.n),x+8,y+24);
+    // caption
+    ctx.fillStyle="#e9eef4";ctx.font="600 34px 'Fraunces'";ctx.fillText(b.t,x+cw/2,y+ch+50);
+    const tw=ctx.measureText(b.t).width;ctx.fillStyle=ARCS[b.a].c;ctx.beginPath();ctx.arc(x+cw/2-tw/2-18,y+ch+40,8,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle="#9fb0c3";ctx.font="24px 'Source Sans 3'";ctx.fillText(String(b.y),x+cw/2,y+ch+82);
+  }
+  if(arc==="all"){ctx.fillStyle="#9fb0c3";ctx.font="italic 26px 'Source Sans 3'";ctx.textAlign="center";
+    ctx.fillText("Releasing 10 is set first in time, but read it last: it spoils Taming 7.",W/2,H-112);}
+  ctx.fillStyle="#d9a441";ctx.font="34px 'Bebas Neue'";ctx.textAlign="center";
+  ctx.fillText("READERSATLAS.COM  ·  @READERS.ATLAS",W/2,H-52);
+  sendHeight();
+}
+function download(){
+  try{
+    cv.toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="boys-of-tommen-reading-order.png";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000);},"image/png");
+  }catch(e){
+    useCovers=false;document.getElementById("note").textContent="Your browser blocked the cover images for download, so this PNG uses the coloured spines.";
+    draw().then(download);
+  }
+}
+function sendHeight(){try{parent.postMessage({posterHeight:document.body.scrollHeight},"*");}catch(e){}}
+document.getElementById("arc").addEventListener("change",draw);
+document.getElementById("dl").addEventListener("click",download);
+window.addEventListener("resize",sendHeight);
+const p=new URLSearchParams(location.search).get("arc");if(p&&ARCS[p])document.getElementById("arc").value=p;
+draw();
+</script>
+</body>
+</html>
